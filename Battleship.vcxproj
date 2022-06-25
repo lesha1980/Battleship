@@ -140,18 +140,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="libs.h" />
+    <ClInclude Include="Model\Cell.h" />
     <ClInclude Include="Model\Deck.h" />
     <ClInclude Include="Model\DoubleDeck.h" />
+    <ClInclude Include="Model\Enums\StatusCell.h" />
     <ClInclude Include="Model\Enums\StatusShip.h" />
     <ClInclude Include="Model\Enums\TypeShip.h" />
     <ClInclude Include="Model\FourDeck.h" />
     <ClInclude Include="Model\MultiDeck.h" />
     <ClInclude Include="Model\Ship.h" />
     <ClInclude Include="Model\SingleDeck.h" />
+    <ClInclude Include="Model\StatusCell.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model\Cell.cpp" />
     <ClCompile Include="Model\Deck.cpp" />
     <ClCompile Include="Model\DoubleDeck.cpp" />
     <ClCompile Include="Model\FourDeck.cpp" />

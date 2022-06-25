@@ -16,6 +16,9 @@
     <Filter Include="Model\Enums">
       <UniqueIdentifier>{38080153-3b19-4b32-8b74-dc3b5aa7bd3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\GameBoard">
+      <UniqueIdentifier>{598a2f33-c310-46f1-9ba4-4e4999314630}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -48,6 +51,15 @@
     <ClInclude Include="Model\FourDeck.h">
       <Filter>Model\Ship</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Cell.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StatusCell.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\StatusCell.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -68,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="Model\FourDeck.cpp">
       <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Cell.cpp">
+      <Filter>Model\GameBoard</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
