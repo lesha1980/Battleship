@@ -158,6 +158,7 @@
     <ClInclude Include="Model\Tabloid.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
     <ClInclude Include="Services\BattleMapGenerateService.h" />
+    <ClInclude Include="Services\BattleShipGenerateService.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
