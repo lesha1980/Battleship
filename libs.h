@@ -7,3 +7,4 @@
 #include "Model/Deck.h"
 #include "Model/Ship.h"
 #include "Model/SingleDeck.h"
+#include "Model/MultiDeck.h"

@@ -143,12 +143,14 @@
     <ClInclude Include="Model\Deck.h" />
     <ClInclude Include="Model\Enums\StatusShip.h" />
     <ClInclude Include="Model\Enums\TypeShip.h" />
+    <ClInclude Include="Model\MultiDeck.h" />
     <ClInclude Include="Model\Ship.h" />
     <ClInclude Include="Model\SingleDeck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Deck.cpp" />
+    <ClCompile Include="Model\MultiDeck.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
