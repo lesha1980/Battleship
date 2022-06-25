@@ -19,6 +19,26 @@ GameBoard::GameBoard()
 	}
 }
 
+int GameBoard::getRows()
+{
+	return this->_rows;
+}
+
+int GameBoard::getColumns()
+{
+	return this->_columns;
+}
+
+int* GameBoard::getLstRow()
+{
+	return this->_lstRow;
+}
+
+char* GameBoard::getLstColumns()
+{
+	return this->_lstCol;
+}
+
 GameBoard::~GameBoard()
 {
 	

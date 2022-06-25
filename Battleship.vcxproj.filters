@@ -19,6 +19,12 @@
     <Filter Include="Model\GameBoard">
       <UniqueIdentifier>{598a2f33-c310-46f1-9ba4-4e4999314630}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\Gamers">
+      <UniqueIdentifier>{9568cbbb-e7e0-4a97-888a-e306071eb129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{577cae78-54bf-4c88-b03b-f927cc1a7ff3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -63,6 +69,18 @@
     <ClInclude Include="Model\GameBoard.h">
       <Filter>Model\GameBoard</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Tabloid.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Gamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ComuterGamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\HumanGamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -90,5 +108,15 @@
     <ClCompile Include="Model\GameBoard.cpp">
       <Filter>Model\GameBoard</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Gamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ComputerGamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\HumanGamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ComuterGamer.cpp" />
   </ItemGroup>
 </Project>

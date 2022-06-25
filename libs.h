@@ -4,6 +4,8 @@
 #include <conio.h>
 #include <string>
 
+using namespace std;
+
 
 #include "Model/Deck.h"
 #include "Model/Ship.h"
@@ -14,3 +16,7 @@
 #include "Model/FourDeck.h"
 #include "Model/Cell.h";
 #include "Model/GameBoard.h"
+#include "Model/Tabloid.h"
+#include "Model/Gamer.h"
+#include "Model/ComuterGamer.h"
+#include "Model/HumanGamer.h"

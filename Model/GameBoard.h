@@ -12,5 +12,10 @@ public:
 
 	GameBoard();
 
+	int getRows();
+	int getColumns();
+	int* getLstRow();
+	char* getLstColumns();
+
 	virtual ~GameBoard();
 };
