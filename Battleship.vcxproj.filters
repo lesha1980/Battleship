@@ -10,6 +10,12 @@
     <Filter Include="libs">
       <UniqueIdentifier>{19c8830a-f0d8-44e0-9a67-506958ad318d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\Ship">
+      <UniqueIdentifier>{acda1b92-69dd-4c0a-82bf-6f21d9e041f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Enums">
+      <UniqueIdentifier>{38080153-3b19-4b32-8b74-dc3b5aa7bd3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -17,6 +23,15 @@
     </ClInclude>
     <ClInclude Include="libs.h">
       <Filter>libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Ship.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\TypeShip.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\StatusShip.h">
+      <Filter>Model\Enums</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

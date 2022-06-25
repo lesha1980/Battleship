@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClInclude Include="libs.h" />
     <ClInclude Include="Model\Deck.h" />
+    <ClInclude Include="Model\Enums\StatusShip.h" />
+    <ClInclude Include="Model\Enums\TypeShip.h" />
+    <ClInclude Include="Model\Ship.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
