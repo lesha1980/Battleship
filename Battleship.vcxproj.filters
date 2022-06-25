@@ -60,6 +60,9 @@
     <ClInclude Include="Model\Enums\StatusCell.h">
       <Filter>Model\Enums</Filter>
     </ClInclude>
+    <ClInclude Include="Model\GameBoard.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -82,6 +85,9 @@
       <Filter>Model\Ship</Filter>
     </ClCompile>
     <ClCompile Include="Model\Cell.cpp">
+      <Filter>Model\GameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\GameBoard.cpp">
       <Filter>Model\GameBoard</Filter>
     </ClCompile>
   </ItemGroup>

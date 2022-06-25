@@ -10,6 +10,7 @@ class Cell {
 public:
 	Cell();
 	Cell(int x, int y);
+	Cell(Cell& cell);
 
 	void setX(int x);
 	void setY(int y);
@@ -17,6 +18,8 @@ public:
 	int getX();
 	int getY();
 	StatusCell getStatusCell();
+
+	Cell& operator=(const Cell& cell);
 
 
 

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <conio.h>
+#include <string>
 
 
 #include "Model/Deck.h"
@@ -11,3 +12,5 @@
 #include "Model/DoubleDeck.h"
 #include "Model/ThreeDeck.h"
 #include "Model/FourDeck.h"
+#include "Model/Cell.h";
+#include "Model/GameBoard.h"

@@ -15,6 +15,13 @@ Cell::Cell(int x, int y)
 	this->_status = StatusCell::Free;
 }
 
+Cell::Cell(Cell& cell)
+{
+	this->_x = cell.getX();
+	this->_y = cell.getY();
+	this->_status = cell.getStatusCell();
+}
+
 void Cell::setX(int x)
 {
 	this->_x = x;
@@ -43,4 +50,13 @@ int Cell::getY()
 StatusCell Cell::getStatusCell()
 {
 	return this->_status;
+}
+
+Cell& Cell::operator=(const Cell& cell)
+{
+	this->_x = cell._x;
+	this->_y = cell._y;
+	this->_status = cell._status;
+
+	return *this;
 }
