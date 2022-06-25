@@ -10,3 +10,4 @@
 #include "Model/MultiDeck.h"
 #include "Model/DoubleDeck.h"
 #include "Model/ThreeDeck.h"
+#include "Model/FourDeck.h"
