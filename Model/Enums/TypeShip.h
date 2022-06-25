@@ -1,7 +1,7 @@
 #pragma once
 
 enum TypeShip {
-	Unknown,
+	UnknownShip,
 	SingleDeck,
 	DoubleDeck,
 	ThreeDeck,

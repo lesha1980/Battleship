@@ -144,6 +144,7 @@
     <ClInclude Include="Model\Enums\StatusShip.h" />
     <ClInclude Include="Model\Enums\TypeShip.h" />
     <ClInclude Include="Model\Ship.h" />
+    <ClInclude Include="Model\SingleDeck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

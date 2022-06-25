@@ -1,7 +1,7 @@
 #pragma once
 
 enum StatusShip {
-	Unknown,
+	UnknownStatus,
 	Alive,
 	Wounded,
 	Dead
