@@ -157,6 +157,7 @@
     <ClInclude Include="Model\StatusCell.h" />
     <ClInclude Include="Model\Tabloid.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
+    <ClInclude Include="Services\BattleMapGenerateService.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="Model\MultiDeck.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
+    <ClCompile Include="Services\BattleMapGenerateService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

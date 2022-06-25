@@ -81,6 +81,9 @@
     <ClInclude Include="Model\HumanGamer.h">
       <Filter>Model\Gamers</Filter>
     </ClInclude>
+    <ClInclude Include="Services\BattleMapGenerateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -118,5 +121,8 @@
       <Filter>Model\Gamers</Filter>
     </ClCompile>
     <ClCompile Include="Model\ComuterGamer.cpp" />
+    <ClCompile Include="Services\BattleMapGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

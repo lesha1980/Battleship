@@ -20,3 +20,6 @@ using namespace std;
 #include "Model/Gamer.h"
 #include "Model/ComuterGamer.h"
 #include "Model/HumanGamer.h"
+
+
+#include "Services/BattleMapGenerateService.h"
