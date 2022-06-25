@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Model">
+      <UniqueIdentifier>{ae846a6d-0824-4561-8015-dbaeb37e8379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Deck">
+      <UniqueIdentifier>{cb5103df-487e-4413-ac9c-5f405eeb4784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{19c8830a-f0d8-44e0-9a67-506958ad318d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Model\Deck.h">
+      <Filter>Model\Deck</Filter>
+    </ClInclude>
+    <ClInclude Include="libs.h">
+      <Filter>libs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Model\Deck.cpp">
+      <Filter>Model\Deck</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+</Project>
