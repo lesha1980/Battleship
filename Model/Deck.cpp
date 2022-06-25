@@ -3,6 +3,10 @@
 
 Deck::Deck()
 {
+	this->_x = 0;
+	this->_y = 0;
+	this->_number = 0;
+	this->_status = false;
 }
 
 Deck::Deck(int x, int y, int number)

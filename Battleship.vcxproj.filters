@@ -42,5 +42,8 @@
       <Filter>Model\Deck</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model\SingleDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
