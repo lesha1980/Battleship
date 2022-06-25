@@ -42,6 +42,9 @@
     <ClInclude Include="Model\DoubleDeck.h">
       <Filter>Model\Ship</Filter>
     </ClInclude>
+    <ClInclude Include="Model\ThreeDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -55,6 +58,9 @@
       <Filter>Model\Ship</Filter>
     </ClCompile>
     <ClCompile Include="Model\DoubleDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ThreeDeck.cpp">
       <Filter>Model\Ship</Filter>
     </ClCompile>
   </ItemGroup>

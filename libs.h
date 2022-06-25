@@ -9,3 +9,4 @@
 #include "Model/SingleDeck.h"
 #include "Model/MultiDeck.h"
 #include "Model/DoubleDeck.h"
+#include "Model/ThreeDeck.h"
