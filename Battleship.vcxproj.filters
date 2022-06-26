@@ -90,6 +90,12 @@
     <ClInclude Include="Services\BattleShipMapValidationService.h">
       <Filter>Services</Filter>
     </ClInclude>
+    <ClInclude Include="Model\ZoneDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\CoordXY.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -136,6 +142,12 @@
       <Filter>Services</Filter>
     </ClCompile>
     <ClCompile Include="Model\Ship.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\CoordXY.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ZoneDeck.cpp">
       <Filter>Model\Ship</Filter>
     </ClCompile>
   </ItemGroup>

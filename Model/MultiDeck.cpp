@@ -4,10 +4,10 @@ MultiDeck::MultiDeck(int size, bool oriental, TypeShip typeShip, StatusShip stat
 {
 	this->_size = size;
 	this->_oriental = oriental;
-	this->_deck = new Deck[this->_size];
+	
 }
 
 MultiDeck::~MultiDeck()
 {
-	delete[] this->_deck;
+	
 }

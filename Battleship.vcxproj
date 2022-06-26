@@ -142,6 +142,7 @@
     <ClInclude Include="libs.h" />
     <ClInclude Include="Model\Cell.h" />
     <ClInclude Include="Model\ComputerGamer.h" />
+    <ClInclude Include="Model\CoordXY.h" />
     <ClInclude Include="Model\Deck.h" />
     <ClInclude Include="Model\DoubleDeck.h" />
     <ClInclude Include="Model\Enums\StatusCell.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="Model\StatusCell.h" />
     <ClInclude Include="Model\Tabloid.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
+    <ClInclude Include="Model\ZoneDeck.h" />
     <ClInclude Include="Services\BattleMapGenerateService.h" />
     <ClInclude Include="Services\BattleShipGenerateService.h" />
     <ClInclude Include="Services\BattleShipMapValidationService.h" />
@@ -165,6 +167,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Cell.cpp" />
     <ClCompile Include="Model\ComputerGamer.cpp" />
+    <ClCompile Include="Model\CoordXY.cpp" />
     <ClCompile Include="Model\Deck.cpp" />
     <ClCompile Include="Model\DoubleDeck.cpp" />
     <ClCompile Include="Model\FourDeck.cpp" />
@@ -175,6 +178,7 @@
     <ClCompile Include="Model\Ship.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
+    <ClCompile Include="Model\ZoneDeck.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipMapValidationService.cpp" />

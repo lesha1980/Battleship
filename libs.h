@@ -7,6 +7,8 @@
 using namespace std;
 
 
+#include "Model/CoordXY.h"
+#include "Model/ZoneDeck.h"
 #include "Model/Deck.h"
 #include "Model/Ship.h"
 #include "Model/SingleDeck.h"
