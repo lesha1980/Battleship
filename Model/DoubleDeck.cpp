@@ -2,10 +2,8 @@
 #include "Enums/StatusShip.h"
 #include "Enums/TypeShip.h"
 
-DoubleDeck::DoubleDeck(bool oriental, int x, int y):MultiDeck(2, oriental)
+DoubleDeck::DoubleDeck(bool oriental, int x, int y):MultiDeck(2, oriental, TypeShip::DoubleDeckShip, StatusShip::Alive)
 {
-	this->_status_ship = StatusShip::Alive;
-	this->_type_ship = TypeShip::DoubleDeckShip;
 	Deck _deck_1;
 	Deck _deck_2;
 	_deck_1.setNumber(1);

@@ -172,6 +172,7 @@
     <ClCompile Include="Model\Gamer.cpp" />
     <ClCompile Include="Model\HumanGamer.cpp" />
     <ClCompile Include="Model\MultiDeck.cpp" />
+    <ClCompile Include="Model\Ship.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp" />

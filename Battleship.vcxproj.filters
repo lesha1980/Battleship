@@ -135,5 +135,8 @@
     <ClCompile Include="Services\BattleShipMapValidationService.cpp">
       <Filter>Services</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Ship.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
