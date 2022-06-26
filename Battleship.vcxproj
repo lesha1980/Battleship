@@ -175,6 +175,7 @@
     <ClCompile Include="Model\SingleDeck.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp" />
+    <ClCompile Include="Services\BattleShipGenerateService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

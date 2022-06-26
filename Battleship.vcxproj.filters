@@ -127,5 +127,8 @@
     <ClCompile Include="Services\BattleMapGenerateService.cpp">
       <Filter>Services</Filter>
     </ClCompile>
+    <ClCompile Include="Services\BattleShipGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

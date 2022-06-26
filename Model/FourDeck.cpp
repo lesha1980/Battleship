@@ -5,7 +5,7 @@
 FourDeck::FourDeck(bool oriental, int x, int y):MultiDeck(4, oriental)
 {
 	this->_status_ship = StatusShip::Alive;
-	this->_type_ship = TypeShip::FourDeck;
+	this->_type_ship = TypeShip::FourDeckShip;
 	Deck _deck_1;
 	Deck _deck_2;
 	Deck _deck_3;

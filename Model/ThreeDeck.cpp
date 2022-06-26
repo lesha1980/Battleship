@@ -5,7 +5,7 @@
 ThreeDeck::ThreeDeck(bool oriental, int x, int y):MultiDeck(3, oriental)
 {
 	this->_status_ship = StatusShip::Alive;
-	this->_type_ship = TypeShip::ThreeDeck;
+	this->_type_ship = TypeShip::ThreeDeckShip;
 	Deck _deck_1;
 	Deck _deck_2;
 	Deck _deck_3;
