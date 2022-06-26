@@ -9,6 +9,7 @@ class SingleDeck: public Ship
 public:
 	SingleDeck(int x, int y);
 	Deck getDeck();
+	ZoneDeck getZoneDeck();
 	
 
 };

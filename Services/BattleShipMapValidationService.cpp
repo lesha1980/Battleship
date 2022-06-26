@@ -70,85 +70,99 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 		Ship* _ship = this->_shipGenerateService[i];
 		if (_ship->getTypeShip() == TypeShip::SingleDeckShip) {
 		    SingleDeck sdeck =(SingleDeck&)_ship;
-			Deck d = sdeck.getDeck();
-
-			if (d.getX() == x && d.getY() == y)
+			ZoneDeck d = sdeck.getZoneDeck();
+			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
+			if (!result)
 				return false;
-
-			if (d.getX() == 0 && d.getY() == 0)
-			{
-				if ((x == 0 && y == 1) || (x == 1 && y == 1) || (x == 1 && y == 0))
-					return false;
-
-			}
-			else if (d.getX() == 0 && d.getY() == columns) {
-				if ((x == 0 && y == columns - 1) || (x == 1 && y == columns - 1) || (x == 1 && y == columns))
-					return false;
-			}
-			else if(d.getX() == rows && d.getY() == 0){
-				if ((x == rows - 1 && y == 0) || (x == rows - 1 && y == 1) || (x == rows && y == 1))
-					return false;
-
-			}
-			else if (d.getX() == rows && d.getY() == columns)
-			{
-				if ((x == rows - 1 && y == columns) || (x == rows - 1 && y == columns - 1) || (x == rows && y == columns - 1))
-					return false;
-			}
-			else if(d.getX() == 0 && (d.getY() > 0 && d.getY() < columns)) {
-				if ((x == 0 && y == (d.getY() + 1)) || (x == 0 && y == (d.getY() - 1)) || (x == 1 && y == d.getY()) || (x == 1 && y == (d.getY() - 1)) || (x == 1 && y == (d.getY() + 1)))
-					return false;
-				
-			}
-			else if (d.getX() == rows && (d.getY() > 0 && d.getY() < columns))
-			{
-				if ((x == rows && y == (d.getY() + 1)) || (x == rows && y == (d.getY() - 1)) || (x == rows - 1 && y == d.getY()) || (x == rows - 1 && y == (d.getY() - 1)) || (x == rows - 1 && y == (d.getY() + 1)))
-					return false;
-			}
-			else if(d.getY() == 0 && (d.getX() > 0 && d.getX() < rows))
-			{
-				if ((y == 0 && x == d.getX() - 1) || (y == 0 && x == d.getX() + 1) || (y == 1 && x == d.getX()) || (y == 1 && x == d.getX() - 1) || (y == 1 && x == d.getX() + 1))
-					return false;
-			}
-			else if (d.getY() == columns && (d.getX() > 0 && d.getX() < rows)) {
-				if ((y == columns && x == d.getX() - 1) || (y == columns && x == d.getX() + 1) || (y == columns - 1 && x == d.getX()) || (y == columns - 1 && x == d.getX() - 1) || (y == columns - 1 && x == d.getX() + 1))
-					return false;
-			}
-			else {
-				if ((x == d.getX() - 1 && y == d.getY() - 1) ||
-					(x == d.getX() - 1 && y == d.getY()) ||
-					(x == d.getX() - 1 && y == d.getY() + 1) ||
-					(x == d.getX() && y == d.getY() - 1) ||
-					(x == d.getX() && y == d.getY() + 1) ||
-					(x == d.getX() + 1 && y == d.getY() - 1)||
-					(x == d.getX() + 1 && y == d.getY()) ||
-					(x == d.getX() + 1 && y == d.getY() + 1))
-				{
-					return false;
-				}
-			}
-
 
 		}
 		if (_ship->getTypeShip() == TypeShip::DoubleDeckShip)
 		{
 			DoubleDeck ddeck = (DoubleDeck&)_ship;
-			Deck deck_1 = ddeck.getDeck_1();
-			Deck deck_2 = ddeck.getDeck_2();
+			ZoneDeck d = ddeck.getZoneDeck();
+			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
+			if (!result)
+				return false;			
+			
+		}
+		if (typeShip == TypeShip::ThreeDeckShip) {
+			ThreeDeck tdeck = (ThreeDeck&)_ship;
+			ZoneDeck d = tdeck.getZoneDeck();
 
-			if (x == deck_1.getX() && y == deck_1.getY() || x == deck_2.getX() && y == deck_2.getY())
+			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
+			if (!result)
 				return false;
-
-			if (deck_1.getX() == 0 && deck_1.getY() == 0)
-			{
-				if ((x == 0 && y == 1) || (x == 1 && y == 1) || (x == 1 && y == 0))
-					return false;
-
-			}
-
+		}
+		if (typeShip == TypeShip::FourDeckShip) {
+			FourDeck fdeck = (FourDeck&)_ship;
+			ZoneDeck d = fdeck.getZoneDeck();
+			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
+			if (!result)
+				return false;
 		}
 	}
 	
 	
+	return true;
+}
+
+bool BattleShipMapValidationService::checkZoneDeck(ZoneDeck d, int x, int y, TypeShip typeShip, bool oriental)
+{
+	switch (typeShip) {
+	case TypeShip::SingleDeckShip: {
+		if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+			y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+			return false;
+	}break;
+	case TypeShip::DoubleDeckShip: {
+		if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+			y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+			return false;
+		if (oriental) {
+			if (x + 1 >= d.getCoord_1().getX() && x + 1 <= d.getCoord_3().getX() &&
+				y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+				return false;
+		}
+		else {
+			if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+				y + 1 >= d.getCoord_1().getY() && y + 1 <= d.getCoord_3().getY())
+				return false;
+		}
+
+	}break;
+	case TypeShip::ThreeDeckShip: {
+		if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+			y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+			return false;
+		if (oriental) {
+
+			if (x + 2 >= d.getCoord_1().getX() && x + 2 <= d.getCoord_3().getX() &&
+				y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+				return false;
+		}
+		else {
+			if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+				y + 2 >= d.getCoord_1().getY() && y + 2 <= d.getCoord_3().getY())
+				return false;
+		}
+
+	}break;
+	case TypeShip::FourDeckShip: {
+		if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+			y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+			return false;
+		if (oriental) {
+
+			if (x + 3 >= d.getCoord_1().getX() && x + 3 <= d.getCoord_3().getX() &&
+				y >= d.getCoord_1().getY() && y <= d.getCoord_3().getY())
+				return false;
+		}
+		else {
+			if (x >= d.getCoord_1().getX() && x <= d.getCoord_3().getX() &&
+				y + 3 >= d.getCoord_1().getY() && y + 3 <= d.getCoord_3().getY())
+				return false;
+		}
+	}
+	}
 	return true;
 }

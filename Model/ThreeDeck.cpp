@@ -58,3 +58,23 @@ ThreeDeck::ThreeDeck(bool oriental, int x, int y):MultiDeck(3, oriental, TypeShi
 	this->_zoneDeck.setCoord_4(coord_4);
 
 }
+
+Deck ThreeDeck::getDeck_1()
+{
+	return this->_deck_1;
+}
+
+Deck ThreeDeck::getDeck_2()
+{
+	return this->_deck_2;
+}
+
+Deck ThreeDeck::getDeck_3()
+{
+	return this->_deck_3;
+}
+
+ZoneDeck ThreeDeck::getZoneDeck()
+{
+	return this->_zoneDeck;
+}

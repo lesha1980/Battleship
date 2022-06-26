@@ -22,3 +22,8 @@ Deck SingleDeck::getDeck()
 {
 	return this->_deck;
 }
+
+ZoneDeck SingleDeck::getZoneDeck()
+{
+	return this->_zoneDeck;
+}

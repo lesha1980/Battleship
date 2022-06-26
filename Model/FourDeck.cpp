@@ -64,3 +64,28 @@ FourDeck::FourDeck(bool oriental, int x, int y):MultiDeck(4, oriental,TypeShip::
 	this->_zoneDeck.setCoord_4(coord_4);
 
 }
+
+Deck FourDeck::getDeck_1()
+{
+	return this->_deck_1;
+}
+
+Deck FourDeck::getDeck_2()
+{
+	return this->_deck_2;
+}
+
+Deck FourDeck::getDeck_3()
+{
+	return this->_deck_3;
+}
+
+Deck FourDeck::getDeck_4()
+{
+	return this->_deck_4;
+}
+
+ZoneDeck FourDeck::getZoneDeck()
+{
+	return this->_zoneDeck;
+}

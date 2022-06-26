@@ -60,3 +60,8 @@ Deck DoubleDeck::getDeck_2()
 {
 	return this->_deck_2;
 }
+
+ZoneDeck DoubleDeck::getZoneDeck()
+{
+	return this->_zoneDeck;
+}

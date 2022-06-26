@@ -9,4 +9,9 @@ class FourDeck: public MultiDeck
 	ZoneDeck _zoneDeck;
 public:
 	FourDeck(bool oriental, int x, int y);
+	Deck getDeck_1();
+	Deck getDeck_2();
+	Deck getDeck_3();
+	Deck getDeck_4();
+	ZoneDeck getZoneDeck();
 };

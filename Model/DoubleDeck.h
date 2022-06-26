@@ -9,4 +9,5 @@ public:
 	DoubleDeck(bool oriental, int x, int y);
 	Deck getDeck_1();
 	Deck getDeck_2();
+	ZoneDeck getZoneDeck();
 };
