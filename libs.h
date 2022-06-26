@@ -28,3 +28,7 @@ using namespace std;
 #include "Services/BattleMapGenerateService.h"
 #include "Services/BattleShipGenerateService.h"
 #include "Services/BattleShipMapValidationService.h"
+#include "Services/BattleShipMapBindingService.h"
+
+
+#include "Model/GameBoardContext.h"

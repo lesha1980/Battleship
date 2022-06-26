@@ -25,6 +25,9 @@
     <Filter Include="Services">
       <UniqueIdentifier>{577cae78-54bf-4c88-b03b-f927cc1a7ff3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{8412d9c9-2b94-4240-bcc7-a37f184f39ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -96,6 +99,12 @@
     <ClInclude Include="Model\CoordXY.h">
       <Filter>Model\Ship</Filter>
     </ClInclude>
+    <ClInclude Include="Services\BattleShipMapBindingService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\GameBoardContext.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -149,6 +158,12 @@
     </ClCompile>
     <ClCompile Include="Model\ZoneDeck.cpp">
       <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleShipMapBindingService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\GameBoardContext.cpp">
+      <Filter>Model\GameBoard</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

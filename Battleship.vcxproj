@@ -150,6 +150,7 @@
     <ClInclude Include="Model\Enums\TypeShip.h" />
     <ClInclude Include="Model\FourDeck.h" />
     <ClInclude Include="Model\GameBoard.h" />
+    <ClInclude Include="Model\GameBoardContext.h" />
     <ClInclude Include="Model\Gamer.h" />
     <ClInclude Include="Model\HumanGamer.h" />
     <ClInclude Include="Model\MultiDeck.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Model\ZoneDeck.h" />
     <ClInclude Include="Services\BattleMapGenerateService.h" />
     <ClInclude Include="Services\BattleShipGenerateService.h" />
+    <ClInclude Include="Services\BattleShipMapBindingService.h" />
     <ClInclude Include="Services\BattleShipMapValidationService.h" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +174,7 @@
     <ClCompile Include="Model\DoubleDeck.cpp" />
     <ClCompile Include="Model\FourDeck.cpp" />
     <ClCompile Include="Model\GameBoard.cpp" />
+    <ClCompile Include="Model\GameBoardContext.cpp" />
     <ClCompile Include="Model\Gamer.cpp" />
     <ClCompile Include="Model\HumanGamer.cpp" />
     <ClCompile Include="Model\MultiDeck.cpp" />
@@ -181,6 +184,7 @@
     <ClCompile Include="Model\ZoneDeck.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipGenerateService.cpp" />
+    <ClCompile Include="Services\BattleShipMapBindingService.cpp" />
     <ClCompile Include="Services\BattleShipMapValidationService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

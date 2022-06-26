@@ -39,6 +39,16 @@ char* GameBoard::getLstColumns()
 	return this->_lstCol;
 }
 
+Cell** GameBoard::getBoard()
+{
+	return this->_board;
+}
+
+void GameBoard::setCellsBoard(Cell** cell)
+{
+	this->_board = cell;
+}
+
 GameBoard::~GameBoard()
 {
 	
