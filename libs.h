@@ -18,10 +18,11 @@ using namespace std;
 #include "Model/GameBoard.h"
 #include "Model/Tabloid.h"
 #include "Model/Gamer.h"
-#include "Model/ComuterGamer.h"
+#include "Model/ComputerGamer.h"
 #include "Model/HumanGamer.h"
 
 
 
 #include "Services/BattleMapGenerateService.h"
 #include "Services/BattleShipGenerateService.h"
+#include "Services/BattleShipMapValidationService.h"

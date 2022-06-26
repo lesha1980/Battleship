@@ -5,7 +5,7 @@ BattleMapGenerateService::BattleMapGenerateService()
 	
 }
 
-GameBoard BattleMapGenerateService::getGameBoard_1()
+GameBoard BattleMapGenerateService::getGameBoard()
 {
 	return this->_gameBoard;
 }

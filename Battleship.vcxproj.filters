@@ -75,7 +75,7 @@
     <ClInclude Include="Model\Gamer.h">
       <Filter>Model\Gamers</Filter>
     </ClInclude>
-    <ClInclude Include="Model\ComuterGamer.h">
+    <ClInclude Include="Model\ComputerGamer.h">
       <Filter>Model\Gamers</Filter>
     </ClInclude>
     <ClInclude Include="Model\HumanGamer.h">
@@ -85,6 +85,9 @@
       <Filter>Services</Filter>
     </ClInclude>
     <ClInclude Include="Services\BattleShipGenerateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleShipMapValidationService.h">
       <Filter>Services</Filter>
     </ClInclude>
   </ItemGroup>
@@ -123,11 +126,13 @@
     <ClCompile Include="Model\HumanGamer.cpp">
       <Filter>Model\Gamers</Filter>
     </ClCompile>
-    <ClCompile Include="Model\ComuterGamer.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp">
       <Filter>Services</Filter>
     </ClCompile>
     <ClCompile Include="Services\BattleShipGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleShipMapValidationService.cpp">
       <Filter>Services</Filter>
     </ClCompile>
   </ItemGroup>

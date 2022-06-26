@@ -9,5 +9,5 @@ class BattleMapGenerateService {
 public:
 	BattleMapGenerateService();
 
-	GameBoard getGameBoard_1();
+	GameBoard getGameBoard();
 };
