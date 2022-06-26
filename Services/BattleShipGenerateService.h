@@ -4,7 +4,7 @@
 
 class BattleShipGenerateService {
 
-	Ship* _ships;
+	Ship** _ships;
 
 public:
 
@@ -13,5 +13,8 @@ public:
 	Ship* CreateDoubleDeck(int x, int y, bool oriental);
 	Ship* CreateThreeDeck(int x, int y, bool oriental);
 	Ship* CreateFourDeck(int x, int y, bool oriental);
+	void CreateDataSingleShip(Ship* (*SingleDeckCreatorPtr)(int, int), int x, int y, int index);
+	void CreateDataDoubleShip(Ship* (*MultiDeckCreatorPtr)(int x, int y, bool oriental), int x, int y, bool oriental, int index);
+	Ship** getShips();
 
 };
