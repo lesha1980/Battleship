@@ -139,6 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Controller\GameBoardContextController.h" />
+    <ClInclude Include="Controller\GamerController.h" />
+    <ClInclude Include="Controller\HumanGamerController.h" />
+    <ClInclude Include="Controller\PCGamerController.h" />
     <ClInclude Include="libs.h" />
     <ClInclude Include="Model\Cell.h" />
     <ClInclude Include="Model\ComputerGamer.h" />
@@ -147,6 +151,7 @@
     <ClInclude Include="Model\DoubleDeck.h" />
     <ClInclude Include="Model\Enums\StatusCell.h" />
     <ClInclude Include="Model\Enums\StatusShip.h" />
+    <ClInclude Include="Model\Enums\StatusTurn.h" />
     <ClInclude Include="Model\Enums\TypeShip.h" />
     <ClInclude Include="Model\FourDeck.h" />
     <ClInclude Include="Model\GameBoard.h" />
@@ -156,16 +161,23 @@
     <ClInclude Include="Model\MultiDeck.h" />
     <ClInclude Include="Model\Ship.h" />
     <ClInclude Include="Model\SingleDeck.h" />
-    <ClInclude Include="Model\StatusCell.h" />
     <ClInclude Include="Model\Tabloid.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
+    <ClInclude Include="Model\Turn.h" />
     <ClInclude Include="Model\ZoneDeck.h" />
+    <ClInclude Include="Services\BattleGamerGenerateService.h" />
     <ClInclude Include="Services\BattleMapGenerateService.h" />
     <ClInclude Include="Services\BattleShipGenerateService.h" />
     <ClInclude Include="Services\BattleShipMapBindingService.h" />
     <ClInclude Include="Services\BattleShipMapValidationService.h" />
+    <ClInclude Include="View\GameMode.h" />
+    <ClInclude Include="View\HumanPCMode.h" />
+    <ClInclude Include="View\GameView.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controller\GameBoardContextController.cpp" />
+    <ClCompile Include="Controller\HumanGamerController.cpp" />
+    <ClCompile Include="Controller\PCGamerController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Cell.cpp" />
     <ClCompile Include="Model\ComputerGamer.cpp" />
@@ -181,11 +193,14 @@
     <ClCompile Include="Model\Ship.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
+    <ClCompile Include="Model\Turn.cpp" />
     <ClCompile Include="Model\ZoneDeck.cpp" />
+    <ClCompile Include="Services\BattleGamerGenerateService.cpp" />
     <ClCompile Include="Services\BattleMapGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipMapBindingService.cpp" />
     <ClCompile Include="Services\BattleShipMapValidationService.cpp" />
+    <ClCompile Include="View\GameView.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

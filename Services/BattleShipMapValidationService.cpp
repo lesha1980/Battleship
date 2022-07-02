@@ -1,5 +1,9 @@
 #include "../libs.h"
 
+BattleShipMapValidationService::BattleShipMapValidationService()
+{
+}
+
 BattleShipMapValidationService::BattleShipMapValidationService(BattleMapGenerateService mapGenerateService, BattleShipGenerateService shipGenerateService)
 {
 	this->_mapGenerateService = mapGenerateService;

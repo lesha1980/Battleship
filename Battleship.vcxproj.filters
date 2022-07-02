@@ -28,6 +28,12 @@
     <Filter Include="Controller">
       <UniqueIdentifier>{8412d9c9-2b94-4240-bcc7-a37f184f39ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{26206f00-f802-4140-9abc-7078e080e6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Game">
+      <UniqueIdentifier>{cb1b2dc3-9caf-4e1f-ab76-24b4caf35e88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -62,9 +68,6 @@
     </ClInclude>
     <ClInclude Include="Model\Cell.h">
       <Filter>Model\GameBoard</Filter>
-    </ClInclude>
-    <ClInclude Include="Model\StatusCell.h">
-      <Filter>Model\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Model\Enums\StatusCell.h">
       <Filter>Model\Enums</Filter>
@@ -104,6 +107,36 @@
     </ClInclude>
     <ClInclude Include="Model\GameBoardContext.h">
       <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GameBoardContextController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="View\HumanPCMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GameView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GameMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Turn.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\StatusTurn.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\HumanGamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\PCGamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleGamerGenerateService.h">
+      <Filter>Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +197,24 @@
     </ClCompile>
     <ClCompile Include="Model\GameBoardContext.cpp">
       <Filter>Model\GameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\GameBoardContextController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GameView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Turn.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\HumanGamerController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\PCGamerController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleGamerGenerateService.cpp">
+      <Filter>Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

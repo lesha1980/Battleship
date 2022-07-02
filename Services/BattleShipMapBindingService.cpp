@@ -1,5 +1,9 @@
 #include "../libs.h"
 
+BattleShipMapBindingService::BattleShipMapBindingService()
+{
+}
+
 BattleShipMapBindingService::BattleShipMapBindingService(GameBoard gameBoard, Ship** ships)
 {
 	this->_gameBoard = gameBoard;
