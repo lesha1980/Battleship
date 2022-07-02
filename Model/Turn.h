@@ -7,6 +7,7 @@ class Turn {
 	int _rw;
 	StatusTurn _status_turn;
 public:
+	Turn();
 	Turn(char clmn, int rw);
 	void setStatusTurn(StatusTurn status);
 

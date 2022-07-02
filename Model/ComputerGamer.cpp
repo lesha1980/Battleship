@@ -1,6 +1,6 @@
 #include "../libs.h"
 
-ComputerGamer::ComputerGamer()
+ComputerGamer::ComputerGamer(string login):Gamer(login)
 {
-	this->_login = "Computer";
+	
 }

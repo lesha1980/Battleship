@@ -34,6 +34,9 @@
     <Filter Include="Model\Game">
       <UniqueIdentifier>{cb1b2dc3-9caf-4e1f-ab76-24b4caf35e88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utilits">
+      <UniqueIdentifier>{dcd81e0d-e3e8-46ec-9438-bb6cda869692}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -138,6 +141,15 @@
     <ClInclude Include="Services\BattleGamerGenerateService.h">
       <Filter>Services</Filter>
     </ClInclude>
+    <ClInclude Include="View\GameHumanPCMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GamePCPCMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilits\BattleStack.h">
+      <Filter>Utilits</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -215,6 +227,15 @@
     </ClCompile>
     <ClCompile Include="Services\BattleGamerGenerateService.cpp">
       <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GameHumanPCMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GamePCPCMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilits\BattleStack.cpp">
+      <Filter>Utilits</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

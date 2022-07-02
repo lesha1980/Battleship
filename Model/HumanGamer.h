@@ -3,5 +3,5 @@
 class HumanGamer:public Gamer 
 {
 public:
-	HumanGamer();
+	HumanGamer(string login);
 };

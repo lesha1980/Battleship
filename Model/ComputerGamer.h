@@ -4,5 +4,5 @@ class ComputerGamer : public Gamer
 {
 
 public:
-	ComputerGamer();
+	ComputerGamer(string login);
 };

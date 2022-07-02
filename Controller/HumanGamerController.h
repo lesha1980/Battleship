@@ -1,6 +1,6 @@
 #pragma once
 
-class HumanGamerController:GamerController {
+class HumanGamerController:public GamerController {
 
 public:
 	Gamer* createGamer(string login);

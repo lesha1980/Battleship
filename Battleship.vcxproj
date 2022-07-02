@@ -170,7 +170,10 @@
     <ClInclude Include="Services\BattleShipGenerateService.h" />
     <ClInclude Include="Services\BattleShipMapBindingService.h" />
     <ClInclude Include="Services\BattleShipMapValidationService.h" />
+    <ClInclude Include="Utilits\BattleStack.h" />
+    <ClInclude Include="View\GameHumanPCMode.h" />
     <ClInclude Include="View\GameMode.h" />
+    <ClInclude Include="View\GamePCPCMode.h" />
     <ClInclude Include="View\HumanPCMode.h" />
     <ClInclude Include="View\GameView.h" />
   </ItemGroup>
@@ -200,6 +203,9 @@
     <ClCompile Include="Services\BattleShipGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipMapBindingService.cpp" />
     <ClCompile Include="Services\BattleShipMapValidationService.cpp" />
+    <ClCompile Include="Utilits\BattleStack.cpp" />
+    <ClCompile Include="View\GameHumanPCMode.cpp" />
+    <ClCompile Include="View\GamePCPCMode.cpp" />
     <ClCompile Include="View\GameView.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

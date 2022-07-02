@@ -1,6 +1,6 @@
 #include "../libs.h"
 
-HumanGamer::HumanGamer()
+HumanGamer::HumanGamer(string login):Gamer(login)
 {
-	this->_login = "Gamer";
+	
 }

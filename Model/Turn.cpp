@@ -1,5 +1,9 @@
 #include "../libs.h"
 
+Turn::Turn()
+{
+}
+
 Turn::Turn(char clmn, int rw)
 {
 }

@@ -6,6 +6,9 @@
 
 using namespace std;
 
+
+
+
 #include "Model/Enums/StatusTurn.h"
 #include "Model/CoordXY.h"
 #include "Model/ZoneDeck.h"
@@ -17,12 +20,13 @@ using namespace std;
 #include "Model/ThreeDeck.h"
 #include "Model/FourDeck.h"
 #include "Model/Cell.h";
+#include "Model/Turn.h"
 #include "Model/GameBoard.h"
 #include "Model/Tabloid.h"
 #include "Model/Gamer.h"
 #include "Model/ComputerGamer.h"
 #include "Model/HumanGamer.h"
-#include "Model/Turn.h"
+
 
 
 
@@ -30,6 +34,7 @@ using namespace std;
 #include "Services/BattleShipGenerateService.h"
 #include "Services/BattleShipMapValidationService.h"
 #include "Services/BattleShipMapBindingService.h"
+#include "Services/BattleGamerGenerateService.h"
 
 #include "Model/GameBoardContext.h"
 
@@ -39,6 +44,11 @@ using namespace std;
 #include "Controller/HumanGamerController.h"
 
 #include "View/GameView.h"
+#include "View/GameMode.h"
+#include "View/GameHumanPCMode.h"
+#include "View/GamePCPCMode.h"
+
+
 
 void startGame();
 void human_pc();
