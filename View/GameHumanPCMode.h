@@ -1,7 +1,9 @@
 #pragma once
 
-class GameHumanPCMode :GameMode {
+class GameHumanPCMode :public GameMode {
 
 public:
 	void init();
+	Gamer* getGamer_1();
+	Gamer* getGamer_2();
 };

@@ -8,8 +8,10 @@ protected:
 	BattleStack<Turn> _turns;
 
 public:
+	Gamer() = default;
 	Gamer(string login);
 	string getLogin();
-	
+	void setTurn(Turn turn);
+	Turn theLastTurn();
 
 };

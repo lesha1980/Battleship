@@ -2,5 +2,5 @@
 
 Gamer* HumanGamerController::createGamer(string login)
 {
-	return nullptr;
+	return this->_gamerService.getHumanGamer(login);
 }

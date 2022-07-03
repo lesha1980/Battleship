@@ -2,5 +2,5 @@
 
 Gamer* PCGamerController::createGamer(string login)
 {
-	return nullptr;
+	return this->_gamerService.getPCGamer(login);
 }

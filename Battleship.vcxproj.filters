@@ -114,9 +114,6 @@
     <ClInclude Include="Controller\GameBoardContextController.h">
       <Filter>Controller</Filter>
     </ClInclude>
-    <ClInclude Include="View\HumanPCMode.h">
-      <Filter>View</Filter>
-    </ClInclude>
     <ClInclude Include="View\GameView.h">
       <Filter>View</Filter>
     </ClInclude>
@@ -233,9 +230,6 @@
     </ClCompile>
     <ClCompile Include="View\GamePCPCMode.cpp">
       <Filter>View</Filter>
-    </ClCompile>
-    <ClCompile Include="Utilits\BattleStack.cpp">
-      <Filter>Utilits</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
