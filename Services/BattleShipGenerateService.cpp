@@ -26,19 +26,12 @@ Ship* BattleShipGenerateService::CreateFourDeck(int x, int y, bool oriental)
 	return new FourDeck(oriental, x, y);
 }
 
-void BattleShipGenerateService::CreateDataSingleShip(Ship* (*SingleDeckCreatorPtr)(int, int), int x, int y, int index)
+void BattleShipGenerateService::setShip(Ship* ship)
 {
-		Ship* _ship = SingleDeckCreatorPtr(x, y);
-		this->_ships[index] = _ship;
+		this->_ships[this->_count] = ship;
 		this->_count++;
 }
 
-void BattleShipGenerateService::CreateDataDoubleShip(Ship* (*MultiDeckCreatorPtr)(int x, int y, bool oriental), int x, int y, bool oriental, int index)
-{
-	Ship* _ship = MultiDeckCreatorPtr(x, y, oriental);
-	this->_ships[index] = _ship;
-	this->_count++;
-}
 
 Ship** BattleShipGenerateService::getShips()
 {

@@ -7,5 +7,10 @@ class GameBoardContextController {
 	BattleShipMapBindingService _shipMapBindingService;
 	BattleShipMapValidationService _shipMapValidationService;
 
+public:
 	GameBoardContextController();
+
+	void binderShipBoard();
+	GameBoard getGameBoard();
+	Ship** getShips();
 };

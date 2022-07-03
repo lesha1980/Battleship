@@ -1,16 +1,8 @@
 #include "../libs.h"
 
-BattleShipMapBindingService::BattleShipMapBindingService()
-{
-}
 
-BattleShipMapBindingService::BattleShipMapBindingService(GameBoard gameBoard, Ship** ships)
-{
-	this->_gameBoard = gameBoard;
-	this->_ships = _ships;
-}
 
-void BattleShipMapBindingService::getGameBoardContext()
+void BattleShipMapBindingService::initGameBoardContext(GameBoard gameBoard, Ship** ships)
 {
     Cell** _board = this->_gameBoard.getBoard();
 	for (size_t i = 0; i < 10; i++) {
@@ -53,3 +45,15 @@ void BattleShipMapBindingService::getGameBoardContext()
 
 	this->_gameBoard.setCellsBoard(_board);
 }
+
+GameBoard BattleShipMapBindingService::getGameBoard()
+{
+	return this->_gameBoard;
+}
+
+Ship** BattleShipMapBindingService::getShips()
+{
+	return this->_ships;
+}
+
+

@@ -4,9 +4,11 @@ class BattleShipMapBindingService {
 
 	GameBoard _gameBoard;
 	Ship** _ships;
+	
 
-public:
-	BattleShipMapBindingService();
-	BattleShipMapBindingService(GameBoard gameBoard, Ship** ships);
-	void getGameBoardContext();
+public:	
+	void initGameBoardContext(GameBoard gameBoard, Ship** ships);
+	GameBoard getGameBoard();
+	Ship** getShips();
+	
 };

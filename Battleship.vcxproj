@@ -205,6 +205,7 @@
     <ClCompile Include="View\GameHumanPCMode.cpp" />
     <ClCompile Include="View\GamePCPCMode.cpp" />
     <ClCompile Include="View\GameView.cpp" />
+    <ClCompile Include="View\GameMode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

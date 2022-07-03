@@ -231,5 +231,8 @@
     <ClCompile Include="View\GamePCPCMode.cpp">
       <Filter>View</Filter>
     </ClCompile>
+    <ClCompile Include="View\GameMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

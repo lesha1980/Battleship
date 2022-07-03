@@ -54,6 +54,7 @@ void startGame();
 void human_pc();
 void pc_pc();
 
+#define TIMENULL time(NULL);
 #define CLEARSCREEN system("cls")
 #define SETLOCAL setlocale(LC_ALL, "");
 #define GETCH _getch();

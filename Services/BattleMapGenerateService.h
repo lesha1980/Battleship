@@ -7,7 +7,7 @@ class BattleMapGenerateService {
 
 
 public:
-	BattleMapGenerateService();
 
 	GameBoard getGameBoard();
+	void setGameBoard(GameBoard gboard);
 };
