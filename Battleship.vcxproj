@@ -175,6 +175,7 @@
     <ClInclude Include="View\GameMode.h" />
     <ClInclude Include="View\GamePCPCMode.h" />
     <ClInclude Include="View\GameView.h" />
+    <ClInclude Include="View\Screen.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Controller\GameBoardContextController.cpp" />
@@ -206,6 +207,7 @@
     <ClCompile Include="View\GamePCPCMode.cpp" />
     <ClCompile Include="View\GameView.cpp" />
     <ClCompile Include="View\GameMode.cpp" />
+    <ClCompile Include="View\Screen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

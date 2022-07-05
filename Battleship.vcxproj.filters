@@ -147,6 +147,9 @@
     <ClInclude Include="Utilits\BattleStack.h">
       <Filter>Utilits</Filter>
     </ClInclude>
+    <ClInclude Include="View\Screen.h">
+      <Filter>View</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -232,6 +235,9 @@
       <Filter>View</Filter>
     </ClCompile>
     <ClCompile Include="View\GameMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Screen.cpp">
       <Filter>View</Filter>
     </ClCompile>
   </ItemGroup>

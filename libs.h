@@ -43,10 +43,12 @@ using namespace std;
 #include "Controller/PCGamerController.h"
 #include "Controller/HumanGamerController.h"
 
+#include "View/Screen.h"
 #include "View/GameView.h"
 #include "View/GameMode.h"
 #include "View/GameHumanPCMode.h"
 #include "View/GamePCPCMode.h"
+
 
 
 
