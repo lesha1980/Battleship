@@ -1,17 +1,11 @@
 #include "../libs.h"
 
 
-void BattleShipMapValidationService::initShipMapValidationService(BattleMapGenerateService mapGenerateService, BattleShipGenerateService shipGenerateService)
+bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShip typeShip, bool oriental, GameBoard& gboard, BattleShipGenerateService &shipGenerateService)
 {
-	this->_mapGenerateService = mapGenerateService;
-	this->_shipGenerateService = shipGenerateService;
-}
 
-bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShip typeShip, bool oriental)
-{
-	GameBoard _gb = this->_mapGenerateService.getGameBoard();
-	int columns = _gb.getColumns();
-	int rows = _gb.getRows();
+	int columns = gboard.getColumns();
+	int rows = gboard.getRows();
 	// перевіряємо чи виходимо за кордони гральної дошки
 	if (x > columns || y > rows) {
 			return false;
@@ -67,11 +61,11 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 	
 	//перевіряємо розміщення корабля відносно інших кораблів
 
-	for (size_t i = 0; i < this->_shipGenerateService.getCount(); i++) {
-		Ship* _ship = this->_shipGenerateService[i];
+	for (size_t i = 0; i < shipGenerateService.getCount(); i++) {
+		Ship* _ship = shipGenerateService[i];
 		if (_ship->getTypeShip() == TypeShip::SingleDeckShip) {
-		    SingleDeck sdeck =(SingleDeck&)_ship;
-			ZoneDeck d = sdeck.getZoneDeck();
+		    SingleDeck* sdeck =(SingleDeck*)_ship;
+			ZoneDeck d = sdeck->getZoneDeck();
 			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
 			if (!result)
 				return false;
@@ -79,24 +73,24 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 		}
 		if (_ship->getTypeShip() == TypeShip::DoubleDeckShip)
 		{
-			DoubleDeck ddeck = (DoubleDeck&)_ship;
-			ZoneDeck d = ddeck.getZoneDeck();
+			DoubleDeck* ddeck = (DoubleDeck*)_ship;
+			ZoneDeck d = ddeck->getZoneDeck();
 			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
 			if (!result)
 				return false;			
 			
 		}
-		if (typeShip == TypeShip::ThreeDeckShip) {
-			ThreeDeck tdeck = (ThreeDeck&)_ship;
-			ZoneDeck d = tdeck.getZoneDeck();
+		if (_ship->getTypeShip() == TypeShip::ThreeDeckShip) {
+			ThreeDeck* tdeck = (ThreeDeck*)_ship;
+			ZoneDeck d = tdeck->getZoneDeck();
 
 			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
 			if (!result)
 				return false;
 		}
-		if (typeShip == TypeShip::FourDeckShip) {
-			FourDeck fdeck = (FourDeck&)_ship;
-			ZoneDeck d = fdeck.getZoneDeck();
+		if (_ship->getTypeShip() == TypeShip::FourDeckShip) {
+			FourDeck* fdeck = (FourDeck*)_ship;
+			ZoneDeck d = fdeck->getZoneDeck();
 			bool result = checkZoneDeck(d, x, y, typeShip, oriental);
 			if (!result)
 				return false;

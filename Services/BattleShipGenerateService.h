@@ -15,8 +15,11 @@ public:
 	Ship* CreateThreeDeck(int x, int y, bool oriental);
 	Ship* CreateFourDeck(int x, int y, bool oriental);
 	void setShip(Ship* ship);
-	Ship** getShips();
+	void logicDelShip();
+
+	//Ship** getShips();
 	int getCount();
+	void setCount(int count);
 
 	Ship* operator[](int index);
 

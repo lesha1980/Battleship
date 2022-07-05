@@ -9,5 +9,7 @@ protected:
 public:
 	MultiDeck(int size, bool oriental, TypeShip typeShip, StatusShip statusShip);
 
-	virtual ~MultiDeck();
+	virtual ~MultiDeck() {
+
+	}
 };

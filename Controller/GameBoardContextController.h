@@ -2,7 +2,7 @@
 
 class GameBoardContextController {
 
-	BattleMapGenerateService _mapGenerateService;
+	//BattleMapGenerateService _mapGenerateService;
 	BattleShipGenerateService _shipGenerateService;
 	BattleShipMapBindingService _shipMapBindingService;
 	BattleShipMapValidationService _shipMapValidationService;
@@ -10,7 +10,7 @@ class GameBoardContextController {
 public:
 	GameBoardContextController();
 
-	void binderShipBoard();
-	GameBoard getGameBoard();
-	Ship** getShips();
+	void binderShipBoard(GameBoard& gboard, Ship** ship);
+	//GameBoard getGameBoard();
+	//Ship** getShips();
 };

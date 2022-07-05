@@ -32,15 +32,28 @@ void BattleShipGenerateService::setShip(Ship* ship)
 		this->_count++;
 }
 
+void BattleShipGenerateService::logicDelShip()
+{
+	this->_count--;
+}
 
-Ship** BattleShipGenerateService::getShips()
+
+
+
+/*Ship** BattleShipGenerateService::getShips()
 {
 	return this->_ships;
 }
+*/
 
 int BattleShipGenerateService::getCount()
 {
 	return this->_count;
+}
+
+void BattleShipGenerateService::setCount(int count)
+{
+	this->_count = count;
 }
 
 Ship* BattleShipGenerateService::operator[](int index)
@@ -52,10 +65,11 @@ Ship* BattleShipGenerateService::operator[](int index)
 
 BattleShipGenerateService::~BattleShipGenerateService()
 {
-	for (size_t i = 0; i < 10; i++) {
+	for (size_t i = 0; i < this->_count; i++) {
 	    delete this->_ships[i];
 	}
 	delete[] this->_ships;
+	
 }
 
 

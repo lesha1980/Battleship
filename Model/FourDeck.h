@@ -14,4 +14,8 @@ public:
 	Deck getDeck_3();
 	Deck getDeck_4();
 	ZoneDeck getZoneDeck();
+
+	virtual ~FourDeck() {
+
+	}
 };

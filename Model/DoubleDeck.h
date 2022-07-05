@@ -10,4 +10,8 @@ public:
 	Deck getDeck_1();
 	Deck getDeck_2();
 	ZoneDeck getZoneDeck();
+
+	virtual ~DoubleDeck() {
+
+	}
 };

@@ -11,12 +11,13 @@ class GameBoard {
 public:
 
 	GameBoard();
-
+	
 	int getRows();
 	int getColumns();
 	int* getLstRow();
 	char* getLstColumns();
 	Cell** getBoard();
 	void setCellsBoard(Cell** cell);
+	
 	virtual ~GameBoard();
 };

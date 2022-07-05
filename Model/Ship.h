@@ -14,5 +14,7 @@ public:
 	TypeShip getTypeShip();
 	StatusShip getStatusShip();
 
+	virtual ~Ship() {
 
+	}
 };

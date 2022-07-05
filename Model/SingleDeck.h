@@ -11,5 +11,7 @@ public:
 	Deck getDeck();
 	ZoneDeck getZoneDeck();
 	
+	virtual ~SingleDeck() {
 
+	}
 };

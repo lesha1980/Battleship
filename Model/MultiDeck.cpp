@@ -7,7 +7,3 @@ MultiDeck::MultiDeck(int size, bool oriental, TypeShip typeShip, StatusShip stat
 	
 }
 
-MultiDeck::~MultiDeck()
-{
-	
-}

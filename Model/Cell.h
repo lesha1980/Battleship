@@ -22,5 +22,4 @@ public:
 	Cell& operator=(const Cell& cell);
 
 
-
 };
