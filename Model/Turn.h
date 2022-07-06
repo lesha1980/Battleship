@@ -3,12 +3,12 @@
 //Клас, що описує хід гравця
 
 class Turn {
-	char _clmn;
+	int _clmn;
 	int _rw;
 	StatusTurn _status_turn;
 public:
 	Turn();
-	Turn(char clmn, int rw);
+	Turn(int clmn, int rw);
 	void setStatusTurn(StatusTurn status);
 
 };

@@ -4,5 +4,6 @@ enum StatusCell {
 	UnknownCell,
 	Free,
 	Occupied,
-	SingleShot
+	SingleShot,
+	HitCell
 };

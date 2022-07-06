@@ -64,4 +64,14 @@ void GamePCPCMode::setStrategyGamer_2(StrategyGame* strategy)
 	this->setStrategyGamer_2(strategy);
 }
 
+CoordXY GamePCPCMode::getXYByStrategyGamer1()
+{
+	return CoordXY();
+}
+
+CoordXY GamePCPCMode::getXYByStrategyGamer2()
+{
+	return CoordXY();
+}
+
 

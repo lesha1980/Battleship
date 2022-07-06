@@ -11,6 +11,7 @@ void GameView::_human_pc_mode(string login)
     Gamer* pc_gamer_2 = mode.getGamer_2();
     GameBoard gb_1 = mode.getGameBoard_1();
     GameBoard gb_2 = mode.getGameBoard_2();
+    GameBoard gb_2_2 = mode.getGameBoard_2_2();
     Ship** ships = mode.getShips();
     Ship** ships_1 = mode.getShips_1();
     cout << "Определяем, кто делает ход первым: человек или компьютер" << endl;
@@ -44,9 +45,328 @@ void GameView::_human_pc_mode(string login)
 
         if (pc) {
             cout << "Ход делает " << pc_gamer_1->getLogin();
+
+            int x, y;
+            cout << "Укажите координаты цели выстрела" << endl;
+            cout << "Укажите координату x " << endl;
+            cin >> x;
+            cout << "Укажите координату y " << endl;
+            cin >> y;
+
+            if (x > 10 || x < 0) {
+                cout << "Неверно указана координата x. Требуется переходить" << endl;
+                continue;
+            }
+            if (y > 10 || y < 0) {
+                cout << "Неверно указана координата y. Требуется переходить" << endl;
+                continue;
+            }
+            pc = !pc;
+
+           
+
+                bool hit = false;
+                for (size_t i = 0; i < 10; i++)
+                {
+                    
+                    Ship* ship = ships_1[i];
+                    if (typeid(ship) == typeid(SingleDeck))
+                    {
+                        SingleDeck* sd = (SingleDeck*)ship;
+                        Deck d = sd->getDeck();
+                        int x_1 = d.getX();
+                        int y_1 = d.getY();
+
+                        if (x_1 == x && y_1 == y)
+                        {
+                            cout << "Фиксируем попадание в цель" << endl;
+                            d.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+
+                    }
+                    else if (typeid(ship) == typeid(DoubleDeck))
+                    {
+                        DoubleDeck* dd = (DoubleDeck*)ship;
+                        Deck d1 = dd->getDeck_1();
+                        Deck d2 = dd->getDeck_2();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                    }
+                    else if (typeid(ship) == typeid(ThreeDeck))
+                    {
+                        ThreeDeck* td = (ThreeDeck*)ship;
+                        Deck d1 = td->getDeck_1();
+                        Deck d2 = td->getDeck_2();
+                        Deck d3 = td->getDeck_3();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                    }
+                    else if (typeid(ship) == typeid(FourDeck))
+                    {
+                        FourDeck* fd = (FourDeck*)ship;
+                        Deck d1 = fd->getDeck_1();
+                        Deck d2 = fd->getDeck_2();
+                        Deck d3 = fd->getDeck_3();
+                        Deck d4 = fd->getDeck_4();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                        else if (d4.getX() == x && d4.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                            gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                            hit = !hit;
+                        }
+                    }
+                }
+                if (!hit) {
+                    cout << "Выстрел мимо цели игрока" << pc_gamer_1->getLogin() << endl;
+                    gb_1.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                    Turn turn(x, y);
+                    turn.setStatusTurn(StatusTurn::Past);
+                    pc_gamer_1->setTurn(turn);
+                }
+            
+
+            
+           
         }
         else {
             cout << "Ход делает " << pc_gamer_2->getLogin();
+
+            int x, y;
+            CoordXY coord = mode.getXYByStrategyGamer2();
+            x = coord.getX();
+            y = coord.getY();
+            pc = !pc;
+
+            if (gb_2.getBoard()[x][y].getStatusCell() == StatusCell::Occupied)
+            {
+                cout << "Зафиксировано попадание в цель игроком" << pc_gamer_2->getLogin() << endl;
+                gb_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+
+                for (size_t i = 0; i < 10; i++)
+                {
+                    Ship* ship = ships[i];
+                    if (typeid(ship) == typeid(SingleDeck))
+                    {
+                        SingleDeck* sd = (SingleDeck*)ship;
+                        Deck d = sd->getDeck();
+                        int x_1 = d.getX();
+                        int y_1 = d.getY();
+
+                        if (x_1 == x && y_1 == y)
+                        {
+                            cout << "Фиксируем попадание в цель" << endl;
+                            d.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+
+                    }
+                    else if (typeid(ship) == typeid(DoubleDeck))
+                    {
+                        DoubleDeck* dd = (DoubleDeck*)ship;
+                        Deck d1 = dd->getDeck_1();
+                        Deck d2 = dd->getDeck_2();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(ThreeDeck))
+                    {
+                        ThreeDeck* td = (ThreeDeck*)ship;
+                        Deck d1 = td->getDeck_1();
+                        Deck d2 = td->getDeck_2();
+                        Deck d3 = td->getDeck_3();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(FourDeck))
+                    {
+                        FourDeck* fd = (FourDeck*)ship;
+                        Deck d1 = fd->getDeck_1();
+                        Deck d2 = fd->getDeck_2();
+                        Deck d3 = fd->getDeck_3();
+                        Deck d4 = fd->getDeck_4();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d4.getX() == x && d4.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                }
+            }
+            else if (gb_2.getBoard()[x][y].getStatusCell() == StatusCell::Free)
+            {
+                cout << "Выстрел мимо цели игрока" << pc_gamer_2->getLogin() << endl;
+                gb_2.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                Turn turn(x, y);
+                turn.setStatusTurn(StatusTurn::Hit);
+                pc_gamer_2->setTurn(turn);
+            }
+
         }
 
 
@@ -115,9 +435,289 @@ void GameView::_pc_pc_mode()
 
         if (pc) {
             cout << "Ход делает " << pc_gamer_1->getLogin();
+
+            int x, y;
+            CoordXY coord = mode.getXYByStrategyGamer1();
+            x = coord.getX();
+            y = coord.getY();
+            pc = !pc;
+
+            if (gb_2_2.getBoard()[x][y].getStatusCell() == StatusCell::Occupied)
+            {
+                cout << "Зафиксировано попадание в цель игроком" << pc_gamer_1->getLogin() << endl;
+                gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                gb_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+
+                for (size_t i = 0; i < 10; i++)
+                {
+                    Ship* ship = ships_1[i];
+                    if (typeid(ship) == typeid(SingleDeck))
+                    {
+                        SingleDeck* sd = (SingleDeck*)ship;
+                        Deck d = sd->getDeck();
+                        int x_1 = d.getX();
+                        int y_1 = d.getY();
+
+                        if (x_1 == x && y_1 == y)
+                        {
+                            cout << "Фиксируем попадание в цель" << endl;
+                            d.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+
+                    }
+                    else if (typeid(ship) == typeid(DoubleDeck))
+                    {
+                        DoubleDeck* dd = (DoubleDeck*)ship;
+                        Deck d1 = dd->getDeck_1();
+                        Deck d2 = dd->getDeck_2();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(ThreeDeck))
+                    {
+                        ThreeDeck* td = (ThreeDeck*)ship;
+                        Deck d1 = td->getDeck_1();
+                        Deck d2 = td->getDeck_2();
+                        Deck d3 = td->getDeck_3();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(FourDeck))
+                    {
+                        FourDeck* fd = (FourDeck*)ship;
+                        Deck d1 = fd->getDeck_1();
+                        Deck d2 = fd->getDeck_2();
+                        Deck d3 = fd->getDeck_3();
+                        Deck d4 = fd->getDeck_4();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                        else if (d4.getX() == x && d4.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_1->setTurn(turn);
+                        }
+                    }
+                }
+            }
+            else if (gb_2_2.getBoard()[x][y].getStatusCell() == StatusCell::Free)
+            {
+                cout << "Выстрел мимо цели игрока" << pc_gamer_1->getLogin() << endl;
+                gb_2_2.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                gb_1.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                Turn turn(x, y);
+                turn.setStatusTurn(StatusTurn::Hit);
+                pc_gamer_1->setTurn(turn);
+            }
         }
         else {
             cout << "Ход делает " << pc_gamer_2->getLogin();
+
+            int x, y;
+            CoordXY coord = mode.getXYByStrategyGamer2();
+            x = coord.getX();
+            y = coord.getY();
+            pc = !pc;
+
+            if (gb_2.getBoard()[x][y].getStatusCell() == StatusCell::Occupied)
+            {
+                cout << "Зафиксировано попадание в цель игроком" << pc_gamer_2->getLogin() << endl;
+                gb_2.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+                gb_2_1.getBoard()[x][y].setStatusCell(StatusCell::HitCell);
+
+                for (size_t i = 0; i < 10; i++)
+                {
+                    Ship* ship = ships[i];
+                    if (typeid(ship) == typeid(SingleDeck))
+                    {
+                        SingleDeck* sd = (SingleDeck*)ship;
+                        Deck d = sd->getDeck();
+                        int x_1 = d.getX();
+                        int y_1 = d.getY();
+
+                        if (x_1 == x && y_1 == y)
+                        {
+                            cout << "Фиксируем попадание в цель" << endl;
+                            d.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+
+                    }
+                    else if (typeid(ship) == typeid(DoubleDeck))
+                    {
+                        DoubleDeck* dd = (DoubleDeck*)ship;
+                        Deck d1 = dd->getDeck_1();
+                        Deck d2 = dd->getDeck_2();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(ThreeDeck))
+                    {
+                        ThreeDeck* td = (ThreeDeck*)ship;
+                        Deck d1 = td->getDeck_1();
+                        Deck d2 = td->getDeck_2();
+                        Deck d3 = td->getDeck_3();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                    else if (typeid(ship) == typeid(FourDeck))
+                    {
+                        FourDeck* fd = (FourDeck*)ship;
+                        Deck d1 = fd->getDeck_1();
+                        Deck d2 = fd->getDeck_2();
+                        Deck d3 = fd->getDeck_3();
+                        Deck d4 = fd->getDeck_4();
+
+                        if (d1.getX() == x && d1.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d1.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d2.getX() == x && d2.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d2.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d3.getX() == x && d3.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                        else if (d4.getX() == x && d4.getY() == y)
+                        {
+                            cout << "Фиксируем попадание в цель " << endl;
+                            d3.setStatus(0);
+                            Turn turn(x, y);
+                            turn.setStatusTurn(StatusTurn::Hit);
+                            pc_gamer_2->setTurn(turn);
+                        }
+                    }
+                }
+            }
+            else if (gb_2_2.getBoard()[x][y].getStatusCell() == StatusCell::Free)
+            {
+                cout << "Выстрел мимо цели игрока" << pc_gamer_2->getLogin() << endl;
+                gb_2.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                gb_2_1.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
+                Turn turn(x, y);
+                turn.setStatusTurn(StatusTurn::Hit);
+                pc_gamer_2->setTurn(turn);
+            }
         }
 
 

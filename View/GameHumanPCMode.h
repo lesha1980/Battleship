@@ -22,4 +22,6 @@ public:
 	Ship** getShips_1();
 	void setStrategyGamer_1(StrategyGame* strategy);
 	void setStrategyGamer_2(StrategyGame* strategy);
+	CoordXY getXYByStrategyGamer1();
+	CoordXY getXYByStrategyGamer2();
 };

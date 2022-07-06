@@ -324,3 +324,13 @@ void GameHumanPCMode::setStrategyGamer_2(StrategyGame* strategy)
 {
 }
 
+CoordXY GameHumanPCMode::getXYByStrategyGamer1()
+{
+	return CoordXY();
+}
+
+CoordXY GameHumanPCMode::getXYByStrategyGamer2()
+{
+	return CoordXY();
+}
+

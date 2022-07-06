@@ -4,10 +4,13 @@ Turn::Turn()
 {
 }
 
-Turn::Turn(char clmn, int rw)
+Turn::Turn(int clmn, int rw)
 {
+	this->_clmn = clmn;
+	this->_rw - rw;
 }
 
 void Turn::setStatusTurn(StatusTurn status)
 {
+	this->_status_turn = status;
 }

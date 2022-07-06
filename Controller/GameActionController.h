@@ -9,4 +9,7 @@ public:
 
 	void setStrategyGamer1(StrategyGame* strategy);
 	void setStrategyGamer2(StrategyGame* strategy);
+	CoordXY getXYByStrategyGamer1();
+	CoordXY getXYByStrategyGamer2();
+
 };
