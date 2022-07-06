@@ -21,5 +21,8 @@ public:
 	GameBoard getGameBoard_2_1();
 	GameBoard getGameBoard_2_2();
 	Ship** getShips_1();
+	void setStrategyGamer_1(StrategyGame* strategy);
+	void setStrategyGamer_2(StrategyGame* strategy);
+
 	
 };

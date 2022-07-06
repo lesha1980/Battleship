@@ -37,6 +37,9 @@
     <Filter Include="Utilits">
       <UniqueIdentifier>{dcd81e0d-e3e8-46ec-9438-bb6cda869692}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\Strategy">
+      <UniqueIdentifier>{c5fc3c31-519a-4eaf-9839-5a10d7cec138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -150,6 +153,21 @@
     <ClInclude Include="View\Screen.h">
       <Filter>View</Filter>
     </ClInclude>
+    <ClInclude Include="Model\StrategyGame.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StrategyRandomShot.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StrategyDontShotZoneShip.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\StrategyContextService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GameActionController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
@@ -239,6 +257,21 @@
     </ClCompile>
     <ClCompile Include="View\Screen.cpp">
       <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyGame.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyRandomShot.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyDontShotZoneShip.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\StrategyContextService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\GameActionController.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

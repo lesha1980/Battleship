@@ -26,6 +26,9 @@ using namespace std;
 #include "Model/Gamer.h"
 #include "Model/ComputerGamer.h"
 #include "Model/HumanGamer.h"
+#include "Model/StrategyGame.h"
+#include "Model/StrategyRandomShot.h"
+#include "Model/StrategyDontShotZoneShip.h"
 
 
 
@@ -35,6 +38,8 @@ using namespace std;
 #include "Services/BattleShipMapValidationService.h"
 #include "Services/BattleShipMapBindingService.h"
 #include "Services/BattleGamerGenerateService.h"
+#include "Services/StrategyContextService.h"
+
 
 #include "Model/GameBoardContext.h"
 
@@ -42,6 +47,7 @@ using namespace std;
 #include "Controller/GamerController.h"
 #include "Controller/PCGamerController.h"
 #include "Controller/HumanGamerController.h"
+#include "Controller/GameActionController.h"
 
 #include "View/Screen.h"
 #include "View/GameView.h"

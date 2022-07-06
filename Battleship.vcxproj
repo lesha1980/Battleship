@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Controller\GameActionController.h" />
     <ClInclude Include="Controller\GameBoardContextController.h" />
     <ClInclude Include="Controller\GamerController.h" />
     <ClInclude Include="Controller\HumanGamerController.h" />
@@ -161,6 +162,9 @@
     <ClInclude Include="Model\MultiDeck.h" />
     <ClInclude Include="Model\Ship.h" />
     <ClInclude Include="Model\SingleDeck.h" />
+    <ClInclude Include="Model\StrategyDontShotZoneShip.h" />
+    <ClInclude Include="Model\StrategyGame.h" />
+    <ClInclude Include="Model\StrategyRandomShot.h" />
     <ClInclude Include="Model\Tabloid.h" />
     <ClInclude Include="Model\ThreeDeck.h" />
     <ClInclude Include="Model\Turn.h" />
@@ -170,6 +174,7 @@
     <ClInclude Include="Services\BattleShipGenerateService.h" />
     <ClInclude Include="Services\BattleShipMapBindingService.h" />
     <ClInclude Include="Services\BattleShipMapValidationService.h" />
+    <ClInclude Include="Services\StrategyContextService.h" />
     <ClInclude Include="Utilits\BattleStack.h" />
     <ClInclude Include="View\GameHumanPCMode.h" />
     <ClInclude Include="View\GameMode.h" />
@@ -178,6 +183,7 @@
     <ClInclude Include="View\Screen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controller\GameActionController.cpp" />
     <ClCompile Include="Controller\GameBoardContextController.cpp" />
     <ClCompile Include="Controller\HumanGamerController.cpp" />
     <ClCompile Include="Controller\PCGamerController.cpp" />
@@ -195,6 +201,9 @@
     <ClCompile Include="Model\MultiDeck.cpp" />
     <ClCompile Include="Model\Ship.cpp" />
     <ClCompile Include="Model\SingleDeck.cpp" />
+    <ClCompile Include="Model\StrategyDontShotZoneShip.cpp" />
+    <ClCompile Include="Model\StrategyGame.cpp" />
+    <ClCompile Include="Model\StrategyRandomShot.cpp" />
     <ClCompile Include="Model\ThreeDeck.cpp" />
     <ClCompile Include="Model\Turn.cpp" />
     <ClCompile Include="Model\ZoneDeck.cpp" />
@@ -203,6 +212,7 @@
     <ClCompile Include="Services\BattleShipGenerateService.cpp" />
     <ClCompile Include="Services\BattleShipMapBindingService.cpp" />
     <ClCompile Include="Services\BattleShipMapValidationService.cpp" />
+    <ClCompile Include="Services\StrategyContextService.cpp" />
     <ClCompile Include="View\GameHumanPCMode.cpp" />
     <ClCompile Include="View\GamePCPCMode.cpp" />
     <ClCompile Include="View\GameView.cpp" />

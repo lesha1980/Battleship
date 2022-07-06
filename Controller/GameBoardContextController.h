@@ -11,6 +11,6 @@ public:
 	GameBoardContextController();
 
 	void binderShipBoard(GameBoard& gboard, Ship** ship);
-	//GameBoard getGameBoard();
-	//Ship** getShips();
+	bool binderShipBoard(GameBoard& gboard, Ship** ship, int x, int y, TypeShip typeShip, bool oriental, int& count);
+	
 };

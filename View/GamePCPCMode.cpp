@@ -54,4 +54,14 @@ Ship** GamePCPCMode::getShips_1()
 	return this->ships_1;
 }
 
+void GamePCPCMode::setStrategyGamer_1(StrategyGame* strategy)
+{
+	this->setStrategyGamer_1(strategy);
+}
+
+void GamePCPCMode::setStrategyGamer_2(StrategyGame* strategy)
+{
+	this->setStrategyGamer_2(strategy);
+}
+
 

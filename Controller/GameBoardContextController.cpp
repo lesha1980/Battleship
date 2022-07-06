@@ -97,13 +97,65 @@ void GameBoardContextController::binderShipBoard(GameBoard& gboard, Ship** ships
     this->_shipMapBindingService.initGameBoardContext(gboard, ships);
 }
 
-/*GameBoard GameBoardContextController::getGameBoard()
+bool GameBoardContextController::binderShipBoard(GameBoard& gboard, Ship** ships, int x, int y, TypeShip typeShip, bool oriental, int &count)
 {
-    return this->_shipMapBindingService.getGameBoard();
-}
-*/
+    TIMENULL;
 
-/*Ship** GameBoardContextController::getShips()
-{
-    return this->_shipMapBindingService.getShips();
-}*/
+    int x_1 = x;
+    int y_1 = y;
+    Ship* sd_1 = nullptr;
+    if (typeShip == TypeShip::SingleDeckShip) {
+        sd_1 = this->_shipGenerateService.CreateSingleDeck(x_1, y_1);
+    }
+    else if (typeShip == TypeShip::DoubleDeckShip) {
+        sd_1 = this->_shipGenerateService.CreateDoubleDeck(x_1, y_1, oriental);
+    }
+    else if (typeShip == TypeShip::ThreeDeckShip) {
+        sd_1 = this->_shipGenerateService.CreateThreeDeck(x_1, y_1, oriental);
+    }
+    else if (typeShip == TypeShip::FourDeckShip) {
+        sd_1 = this->_shipGenerateService.CreateFourDeck(x_1, y_1, oriental);
+    }
+
+    if (count == 0)
+    {
+        ships[0] = sd_1;
+        count++;
+        return true;
+    }
+
+    for (size_t i = 0; i < count; i++) {
+        this->_shipGenerateService.setShip(ships[i]);
+    }
+    bool pl = true;
+    if (typeShip == TypeShip::SingleDeckShip) {
+        pl = this->_shipMapValidationService.shipPlacingValidation(x_1, y_1, TypeShip::SingleDeckShip, oriental, gboard, this->_shipGenerateService);
+    }
+    else if (typeShip == TypeShip::DoubleDeckShip)
+    {
+        pl = this->_shipMapValidationService.shipPlacingValidation(x_1, y_1, TypeShip::DoubleDeckShip, oriental, gboard, this->_shipGenerateService);
+    }
+    else if (typeShip == TypeShip::ThreeDeckShip)
+    {
+        pl = this->_shipMapValidationService.shipPlacingValidation(x_1, y_1, TypeShip::ThreeDeckShip, oriental, gboard, this->_shipGenerateService);
+    }
+    else if (typeShip == TypeShip::FourDeckShip)
+    {
+        pl = this->_shipMapValidationService.shipPlacingValidation(x_1, y_1, TypeShip::FourDeckShip, oriental, gboard, this->_shipGenerateService);
+    }
+
+    if (!pl) {
+        return false;
+    }
+
+    ships[count] = sd_1;
+    count++;
+
+    if (count == 10) {
+        this->_shipMapBindingService.initGameBoardContext(gboard, ships);
+    }
+   
+    return true;
+
+}
+
