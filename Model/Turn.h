@@ -10,5 +10,8 @@ public:
 	Turn();
 	Turn(int clmn, int rw);
 	void setStatusTurn(StatusTurn status);
+	StatusTurn getStatusTurn();
+	int getColumn();
+	int getRow();
 
 };

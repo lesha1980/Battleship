@@ -10,6 +10,9 @@ public:
     BattleStack<T>() {
         this->_top = 0;
     }
+    int getTop() {
+        return this->_top;
+    }
     bool push(T elem) {
         if (this->isEmpty()) {
             this->_arr[this->_top] = elem;

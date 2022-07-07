@@ -39,6 +39,33 @@ void GameView::_human_pc_mode(string login)
 
     while (true) {
 
+        int sum = 0;
+        int sum1 = 0;
+        for (size_t i = 0; i < 10; i++)
+        {
+            ships[i]->selfTest();
+            if (ships[i]->getStatusShip() == StatusShip::Dead)
+            {
+                sum++;
+            }
+            ships_1[i]->selfTest();
+            if (ships_1[i]->getStatusShip() == StatusShip::Dead)
+            {
+                sum1++;
+            }
+        }
+
+        if (sum == 10 && sum1 < 10) {
+            cout << "Игрок " << pc_gamer_1->getLogin() << " выиграл морское сражение!";
+            break;
+        }
+        if (sum < 10 && sum1 == 10)
+        {
+            cout << "Игрок " << pc_gamer_2->getLogin() << " выиграл морское сражение!";
+            break;
+        }
+          
+
         cout << "Игра между " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
 
         screen.printScreenGamer_1(gb_1, gb_2, ships, ships_1);
@@ -427,6 +454,32 @@ void GameView::_pc_pc_mode()
     }
 
     while (true) {
+
+        int sum = 0;
+        int sum1 = 0;
+        for (size_t i = 0; i < 10; i++)
+        {
+            ships[i]->selfTest();
+            if (ships[i]->getStatusShip() == StatusShip::Dead)
+            {
+                sum++;
+            }
+            ships_1[i]->selfTest();
+            if (ships_1[i]->getStatusShip() == StatusShip::Dead)
+            {
+                sum1++;
+            }
+        }
+
+        if (sum == 10 && sum1 < 10) {
+            cout << "Игрок " << pc_gamer_1->getLogin() << " выиграл морское сражение!";
+            break;
+        }
+        if (sum < 10 && sum1 == 10)
+        {
+            cout << "Игрок " << pc_gamer_2->getLogin() << " выиграл морское сражение!";
+            break;
+        }
 
         cout << "Игра между компьютером " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
         

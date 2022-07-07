@@ -15,3 +15,7 @@ StatusShip Ship::getStatusShip()
 {
 	return this->_status_ship;
 }
+
+void Ship::selfTest()
+{
+}

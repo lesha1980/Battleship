@@ -10,6 +10,7 @@ public:
 	SingleDeck(int x, int y);
 	Deck getDeck();
 	ZoneDeck getZoneDeck();
+	void selfTest();
 	
 	virtual ~SingleDeck() {
 

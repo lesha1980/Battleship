@@ -27,3 +27,10 @@ ZoneDeck SingleDeck::getZoneDeck()
 {
 	return this->_zoneDeck;
 }
+
+void SingleDeck::selfTest()
+{
+	if (!this->_deck.getStatus()) {
+		this->_status_ship = StatusShip::Dead;
+	}
+}

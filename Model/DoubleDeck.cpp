@@ -65,3 +65,24 @@ ZoneDeck DoubleDeck::getZoneDeck()
 {
 	return this->_zoneDeck;
 }
+
+void DoubleDeck::selfTest()
+{
+	int sum = 0;
+	if (!this->_deck_1.getStatus())
+	{
+		sum++;
+	}
+	if (!this->_deck_2.getStatus())
+	{
+		sum++;
+	}
+
+	if (sum == 1) {
+		this->_status_ship = StatusShip::Wounded;
+	}
+	else if (sum == 2)
+	{
+		this->_status_ship = StatusShip::Dead;
+	}
+}

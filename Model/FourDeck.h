@@ -14,6 +14,7 @@ public:
 	Deck getDeck_3();
 	Deck getDeck_4();
 	ZoneDeck getZoneDeck();
+	void selfTest();
 
 	virtual ~FourDeck() {
 

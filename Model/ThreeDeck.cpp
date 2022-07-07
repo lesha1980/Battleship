@@ -78,3 +78,28 @@ ZoneDeck ThreeDeck::getZoneDeck()
 {
 	return this->_zoneDeck;
 }
+
+void ThreeDeck::selfTest()
+{
+	int sum = 0;
+	if (!this->_deck_1.getStatus())
+	{
+		sum++;
+	}
+	if (!this->_deck_2.getStatus())
+	{
+		sum++;
+	}
+	if (!this->_deck_3.getStatus())
+	{
+		sum++;
+	}
+
+	if (sum >= 1 && sum < 3 ) {
+		this->_status_ship = StatusShip::Wounded;
+	}
+	else if (sum == 3)
+	{
+		this->_status_ship = StatusShip::Dead;
+	}
+}

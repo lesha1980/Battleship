@@ -89,3 +89,28 @@ ZoneDeck FourDeck::getZoneDeck()
 {
 	return this->_zoneDeck;
 }
+
+void FourDeck::selfTest()
+{
+	int sum = 0;
+	if (!this->_deck_1.getStatus())
+	{
+		sum++;
+	}
+	if (!this->_deck_2.getStatus())
+	{
+		sum++;
+	}
+	if (!this->_deck_3.getStatus())
+	{
+		sum++;
+	}
+
+	if (sum >= 1 && sum < 4) {
+		this->_status_ship = StatusShip::Wounded;
+	}
+	else if (sum == 4)
+	{
+		this->_status_ship = StatusShip::Dead;
+	}
+}

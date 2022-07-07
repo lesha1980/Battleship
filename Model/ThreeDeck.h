@@ -12,6 +12,7 @@ public:
 	Deck getDeck_2();
 	Deck getDeck_3();
 	ZoneDeck getZoneDeck();
+	void selfTest();
 
 	virtual ~ThreeDeck() {
 
