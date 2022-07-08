@@ -9,13 +9,38 @@ void GameBoardContextController::binderShipBoard(GameBoard& gboard, Ship** ships
 {
     TIMENULL;
     
-    int x_1 = rand() % 10;
-    int y_1 = rand() % 10;
-    bool oriental_1 = rand() % 2;
+    int d = 0;
+    while (d < 1) {
+        bool ctrl = true;
+        Ship* sd = nullptr;
+
+
+        while (ctrl) {
+            int x_1 = rand() % 10;
+            int y_1 = rand() % 10;
+            bool oriental_1 = rand() % 2;
+            sd = this->_shipGenerateService.CreateFourDeck(x_1, y_1, oriental_1);
+            this->_shipGenerateService.setShip(sd);
+
+            bool pl = this->_shipMapValidationService.shipPlacingValidation(x_1, y_1, TypeShip::FourDeckShip, oriental_1, gboard, this->_shipGenerateService);
+            if (pl) {
+                ctrl = !ctrl;
+            }
+            else {
+                this->_shipGenerateService.logicDelShip();
+            }
+        }
+
+        ships[0] = sd;
+        d++;
+    }
+
+   
+    /*bool oriental_1 = rand() % 2;
 
     Ship* sd_1 = this->_shipGenerateService.CreateFourDeck(x_1, y_1, oriental_1);
     ships[0] = sd_1;
-    this->_shipGenerateService.setShip(sd_1);
+    this->_shipGenerateService.setShip(sd_1);*/
 
     int i = 0;
     while (i < 2) {
@@ -29,7 +54,7 @@ void GameBoardContextController::binderShipBoard(GameBoard& gboard, Ship** ships
             bool oriental_2 = rand() % 2;
             sd_2 = this->_shipGenerateService.CreateThreeDeck(x_2, y_2, oriental_2);
             this->_shipGenerateService.setShip(sd_2);
-           // this->_shipMapValidationService.initShipMapValidationService(gboard, this->_shipGenerateService);
+          
             bool pl = this->_shipMapValidationService.shipPlacingValidation(x_2, y_2, TypeShip::ThreeDeckShip, oriental_2, gboard, this->_shipGenerateService);
             if (pl) {
                 ctrl = !ctrl;

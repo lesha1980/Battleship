@@ -30,7 +30,7 @@ void startGame() {
 	}
 
 
-	GETCH;
+	
 }
 
 void human_pc() {

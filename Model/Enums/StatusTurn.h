@@ -1,7 +1,7 @@
 #pragma once
 
 enum StatusTurn {
-	Unknown,
+	UnknownTurn,
 	Past,
 	Hit
 };

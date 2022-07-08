@@ -13,6 +13,7 @@ public:
     int getTop() {
         return this->_top;
     }
+
     bool push(T elem) {
         if (this->isEmpty()) {
             this->_arr[this->_top] = elem;

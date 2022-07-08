@@ -10,4 +10,6 @@ public:
 	void setStrategy(StrategyGame* strategy);
 	void setTurns(BattleStack<Turn> turns);
 	CoordXY StrategyShot();
+
+    
 };

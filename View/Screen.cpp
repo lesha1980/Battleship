@@ -3,28 +3,25 @@
 void Screen::printScreenGamer_1(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship** ships_2)
 {
 	this->printScreen(gb_1, gb_2, ships_1, ships_2);
+	
+	
 }
 
 void Screen::printScreenGamer_2(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship** ships_2)
 {
 	this->printScreen(gb_1, gb_2, ships_1, ships_2);
+	
 }
 
 void Screen::printScreen(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship** ships_2)
 {
 	Cell** cells_1 = gb_1.getBoard();
 	Cell** cells_2 = gb_2.getBoard();
-	char* lstCols = gb_1.getLstColumns();
-	int* lstRows = gb_1.getLstRow();
-
-	for (size_t i = 0; i < strlen(lstCols); i++) {
-		cout << lstCols[i] << ' ';
-	}
 
 	//Поле для противника геймера 1 
-	for (size_t i = 0; i < gb_1.getRows(); i++) {
-		cout << lstRows[i] << ' ';
-		for (size_t j = 0; j < gb_1.getColumns(); j++)
+	for (int i = 0; i < 10; i++) {
+		
+		for (size_t j = 0; j < 10; j++)
 		{
 			bool a = true;
 			for (size_t k = 0; k < 10; k++) {
@@ -140,21 +137,21 @@ void Screen::printScreen(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship*
 				cout << '0' << ' ';
 			}
 		}
+		cout << endl;
 	}
-
-	for (size_t i = 0; i < strlen(lstCols); i++) {
+	/*for (size_t i = 0; i < strlen(lstCols); i++) {
 		cout << lstCols[i] << ' ';
-	}
-
+	}*/
+	cout << endl;
 	//Поле власних кораблів геймера 1 
-	for (size_t i = 0; i < gb_2.getRows(); i++) {
-		cout << lstRows[i] << ' ';
-		for (size_t j = 0; j < gb_2.getColumns(); j++)
+	for (size_t i = 0; i < 10; i++) {
+		
+		for (size_t j = 0; j < 10; j++)
 		{
-			if (cells_1[i][j].getStatusCell() == StatusCell::Free) {
+			if (cells_2[i][j].getStatusCell() == StatusCell::Free) {
 				cout << '0' << ' ';
 			}
-			else if (cells_1[i][j].getStatusCell() == StatusCell::Occupied)
+			else if (cells_2[i][j].getStatusCell() == StatusCell::Occupied)
 			{
 				bool a = true;
 				for (size_t k = 0; k < 10; k++) {
@@ -270,11 +267,12 @@ void Screen::printScreen(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship*
 					cout << '1' << ' ';
 				}
 			}
-			else if (cells_1[i][j].getStatusCell() == StatusCell::SingleShot)
+			else if (cells_2[i][j].getStatusCell() == StatusCell::SingleShot)
 			{
 				cout << '*' << ' ';
 			}
 		}
+		cout << endl;
 	}
 
 

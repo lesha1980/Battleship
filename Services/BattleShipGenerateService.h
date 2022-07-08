@@ -23,6 +23,6 @@ public:
 
 	Ship* operator[](int index);
 
-	virtual ~BattleShipGenerateService();
+	~BattleShipGenerateService();
 
 };

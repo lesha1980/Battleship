@@ -12,9 +12,5 @@ void StrategyContextService::setTurns(BattleStack<Turn> turns)
 
 CoordXY StrategyContextService::StrategyShot()
 {
-	if (typeid(this->_strategy) == typeid(StrategyDontShotZoneShip))
-	{
-
-	}
 	return this->_strategy->Strategy();
 }

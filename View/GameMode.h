@@ -17,4 +17,9 @@ public:
 	virtual Gamer* getGamer_1() = 0;
 	virtual Gamer* getGamer_2() = 0;
 
+	virtual ~GameMode() {
+		delete this->_gamer1;
+		delete this->_gamer2;
+	}
+
 };

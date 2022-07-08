@@ -22,6 +22,20 @@ public:
 	Ship** getShips_1();
 	void setStrategyGamer_1(StrategyGame* strategy);
 	void setStrategyGamer_2(StrategyGame* strategy);
+	void setTurnsGamer1(BattleStack<Turn> turns);
+	void setTurnsGamer2(BattleStack<Turn> turns);
 	CoordXY getXYByStrategyGamer1();
 	CoordXY getXYByStrategyGamer2();
+
+	virtual ~GameHumanPCMode() {
+		for (size_t i = 0; i < 10; i++) {
+			delete ships[i];
+		}
+		delete[] ships;
+
+		for (size_t i = 0; i < 10; i++) {
+			delete ships_1[i];
+		}
+		delete[] ships_1;
+	}
 };

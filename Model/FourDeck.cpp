@@ -45,8 +45,8 @@ FourDeck::FourDeck(bool oriental, int x, int y):MultiDeck(4, oriental,TypeShip::
 		this->_deck_2.setY(y + 1);
 		this->_deck_3.setX(x);
 		this->_deck_3.setY(y + 2);
-		this->_deck_3.setX(x);
-		this->_deck_3.setY(y + 3);
+		this->_deck_4.setX(x);
+		this->_deck_4.setY(y + 3);
 
 		coord_1.setX(x - 1);
 		coord_1.setY(y - 1);

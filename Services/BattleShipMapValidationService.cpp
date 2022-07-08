@@ -15,12 +15,12 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 	case TypeShip::DoubleDeckShip:
 	{
 		if (oriental) {
-			if (x + 1 > columns) {
+			if (x + 1 >= columns) {
 				return false;
 			}
 		}
 		else {
-			if (y + 1 > rows)
+			if (y + 1 >= rows)
 			{
 				return false;
 			}
@@ -30,12 +30,12 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 	case TypeShip::ThreeDeckShip: 
 	{
 		if (oriental) {
-			if (x + 2 > columns) {
+			if (x + 2 >= columns) {
 				return false;
 			}
 		}
 		else {
-			if (y + 2 > rows)
+			if (y + 2 >= rows)
 			{
 				return false;
 			}
@@ -45,12 +45,12 @@ bool BattleShipMapValidationService::shipPlacingValidation(int x, int y, TypeShi
 	case TypeShip::FourDeckShip:
 	{
 		if (oriental) {
-			if (x + 3 > columns) {
+			if (x + 3 >= columns) {
 				return false;
 			}
 		}
 		else {
-			if (y + 3 > rows)
+			if (y + 3 >= rows)
 			{
 				return false;
 			}

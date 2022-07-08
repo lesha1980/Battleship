@@ -5,8 +5,8 @@ class GameBoard {
 	Cell** _board;
 	int _rows;
 	int _columns;
-	int* _lstRow;
-	char* _lstCol;
+	//int* _lstRow;
+	//char* _lstCol;
 
 public:
 
@@ -14,10 +14,10 @@ public:
 	
 	int getRows();
 	int getColumns();
-	int* getLstRow();
-	char* getLstColumns();
+	//int* getLstRow();
+	//char* getLstColumns();
 	Cell** getBoard();
 	void setCellsBoard(Cell** cell);
 	
-	virtual ~GameBoard();
+	~GameBoard();
 };

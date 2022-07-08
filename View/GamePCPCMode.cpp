@@ -10,6 +10,7 @@ void GamePCPCMode::init()
 	this->ships_1 = new Ship* [10];
 	this->_gboard_ctrl.binderShipBoard(this->_gb_2, this->ships);
 	this->_gboard_ctrl.binderShipBoard(this->_gb_2_2, this->ships_1);
+
 	
 }
 
@@ -56,22 +57,32 @@ Ship** GamePCPCMode::getShips_1()
 
 void GamePCPCMode::setStrategyGamer_1(StrategyGame* strategy)
 {
-	this->setStrategyGamer_1(strategy);
+	this->_gaction_ctrl.setStrategyGamer1(strategy);
 }
 
 void GamePCPCMode::setStrategyGamer_2(StrategyGame* strategy)
 {
-	this->setStrategyGamer_2(strategy);
+	this->_gaction_ctrl.setStrategyGamer2(strategy);
+}
+
+void GamePCPCMode::setTurnsGamer1(BattleStack<Turn> turns)
+{
+	this->_gaction_ctrl.setTurnsGamer1(turns);
+}
+
+void GamePCPCMode::setTurnsGamer2(BattleStack<Turn> turns)
+{
+	this->_gaction_ctrl.setTurnsGamer2(turns);
 }
 
 CoordXY GamePCPCMode::getXYByStrategyGamer1()
 {
-	return CoordXY();
+	return this->_gaction_ctrl.getXYByStrategyGamer1();
 }
 
 CoordXY GamePCPCMode::getXYByStrategyGamer2()
 {
-	return CoordXY();
+	return this->_gaction_ctrl.getXYByStrategyGamer2();
 }
 
 

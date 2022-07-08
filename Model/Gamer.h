@@ -14,4 +14,8 @@ public:
 	void setTurn(Turn turn);
 	Turn theLastTurn();
 
+	virtual ~Gamer(){
+
+	}
+
 };

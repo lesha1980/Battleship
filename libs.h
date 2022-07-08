@@ -1,12 +1,19 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+
 
 #include <iostream>
+#include <Windows.h>
 #include <conio.h>
 #include <string>
 
+
+#define TIMENULL time(NULL);
+#define CLEARSCREEN system("cls")
+#define SETLOCAL setlocale(LC_ALL, "");
+#define GETCH _getch();
+
 using namespace std;
-
-
 
 
 #include "Model/Enums/StatusTurn.h"
@@ -56,13 +63,7 @@ using namespace std;
 #include "View/GamePCPCMode.h"
 
 
-
-
 void startGame();
 void human_pc();
 void pc_pc();
 
-#define TIMENULL time(NULL);
-#define CLEARSCREEN system("cls")
-#define SETLOCAL setlocale(LC_ALL, "");
-#define GETCH _getch();

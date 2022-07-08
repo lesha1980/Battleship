@@ -450,11 +450,12 @@ void GameView::_pc_pc_mode()
     }
     else {
         cout << " стратегии случайного выстрела " << endl;
-        mode.setStrategyGamer_1(new StrategyRandomShot());
+        mode.setStrategyGamer_2(new StrategyRandomShot());
     }
-
+   
     while (true) {
 
+   
         int sum = 0;
         int sum1 = 0;
         for (size_t i = 0; i < 10; i++)
@@ -481,10 +482,17 @@ void GameView::_pc_pc_mode()
             break;
         }
 
+       
+        
         cout << "Игра между компьютером " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
         
         screen.printScreenGamer_1(gb_1, gb_2, ships, ships_1);
+        cout << endl;
         screen.printScreenGamer_2(gb_2_1, gb_2_2, ships_1, ships);
+       
+        GETCH;
+        CLEARSCREEN;
+       
 
         if (pc) {
             cout << "Ход делает " << pc_gamer_1->getLogin();
@@ -773,6 +781,8 @@ void GameView::_pc_pc_mode()
             }
         }
 
-
+      
     }
+
+    
 }

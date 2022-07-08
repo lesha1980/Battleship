@@ -324,6 +324,14 @@ void GameHumanPCMode::setStrategyGamer_2(StrategyGame* strategy)
 {
 }
 
+void GameHumanPCMode::setTurnsGamer1(BattleStack<Turn> turns)
+{
+}
+
+void GameHumanPCMode::setTurnsGamer2(BattleStack<Turn> turns)
+{
+}
+
 CoordXY GameHumanPCMode::getXYByStrategyGamer1()
 {
 	return CoordXY();
