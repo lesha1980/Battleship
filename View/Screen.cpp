@@ -134,7 +134,13 @@ void Screen::printScreen(GameBoard& gb_1, GameBoard& gb_2, Ship** ships_1, Ship*
 				}
 			}
 			if (a) {
-				cout << '0' << ' ';
+				if (cells_1[i][j].getStatusCell() == StatusCell::SingleShot)
+				{
+					cout << '*' << ' ';
+				}
+				else {
+					cout << '0' << ' ';
+				}
 			}
 		}
 		cout << endl;

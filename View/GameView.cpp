@@ -4,7 +4,7 @@ void GameView::_human_pc_mode(string login)
 {
     GameHumanPCMode mode;
     Screen screen;
-    
+    mode.setGamerLogin(login);
     mode.init();
     TIMENULL;
     Gamer* pc_gamer_1 = mode.getGamer_1();
@@ -64,7 +64,9 @@ void GameView::_human_pc_mode(string login)
             cout << "Игрок " << pc_gamer_2->getLogin() << " выиграл морское сражение!";
             break;
         }
-          
+         
+        GETCH;
+        CLEARSCREEN;
 
         cout << "Игра между " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
 
@@ -79,6 +81,7 @@ void GameView::_human_pc_mode(string login)
             cin >> x;
             cout << "Укажите координату y " << endl;
             cin >> y;
+            cin.clear();
 
             if (x > 10 || x < 0) {
                 cout << "Неверно указана координата x. Требуется переходить" << endl;
@@ -97,7 +100,7 @@ void GameView::_human_pc_mode(string login)
                 {
                     
                     Ship* ship = ships_1[i];
-                    if (typeid(ship) == typeid(SingleDeck))
+                    if (ship->getTypeShip() == TypeShip::SingleDeckShip)
                     {
                         SingleDeck* sd = (SingleDeck*)ship;
                         Deck d = sd->getDeck();
@@ -117,7 +120,7 @@ void GameView::_human_pc_mode(string login)
                         }
 
                     }
-                    else if (typeid(ship) == typeid(DoubleDeck))
+                    else if (ship->getTypeShip() == TypeShip::DoubleDeckShip)
                     {
                         DoubleDeck* dd = (DoubleDeck*)ship;
                         Deck d1 = dd->getDeck_1();
@@ -146,7 +149,7 @@ void GameView::_human_pc_mode(string login)
                             hit = !hit;
                         }
                     }
-                    else if (typeid(ship) == typeid(ThreeDeck))
+                    else if (ship->getTypeShip() == TypeShip::ThreeDeckShip)
                     {
                         ThreeDeck* td = (ThreeDeck*)ship;
                         Deck d1 = td->getDeck_1();
@@ -187,7 +190,7 @@ void GameView::_human_pc_mode(string login)
                             hit = !hit;
                         }
                     }
-                    else if (typeid(ship) == typeid(FourDeck))
+                    else if (ship->getTypeShip() == TypeShip::FourDeckShip)
                     {
                         FourDeck* fd = (FourDeck*)ship;
                         Deck d1 = fd->getDeck_1();
@@ -242,7 +245,7 @@ void GameView::_human_pc_mode(string login)
                     }
                 }
                 if (!hit) {
-                    cout << "Выстрел мимо цели игрока" << pc_gamer_1->getLogin() << endl;
+                    cout << "Выстрел мимо цели игрока " << pc_gamer_1->getLogin() << endl;
                     gb_1.getBoard()[x][y].setStatusCell(StatusCell::SingleShot);
                     Turn turn(x, y);
                     turn.setStatusTurn(StatusTurn::Past);
@@ -270,7 +273,7 @@ void GameView::_human_pc_mode(string login)
                 for (size_t i = 0; i < 10; i++)
                 {
                     Ship* ship = ships[i];
-                    if (typeid(ship) == typeid(SingleDeck))
+                    if (ship->getTypeShip() == TypeShip::SingleDeckShip)
                     {
                         SingleDeck* sd = (SingleDeck*)ship;
                         Deck d = sd->getDeck();
@@ -287,7 +290,7 @@ void GameView::_human_pc_mode(string login)
                         }
 
                     }
-                    else if (typeid(ship) == typeid(DoubleDeck))
+                    else if (ship->getTypeShip() == TypeShip::DoubleDeckShip)
                     {
                         DoubleDeck* dd = (DoubleDeck*)ship;
                         Deck d1 = dd->getDeck_1();
@@ -310,7 +313,7 @@ void GameView::_human_pc_mode(string login)
                             pc_gamer_2->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(ThreeDeck))
+                    else if (ship->getTypeShip() == TypeShip::ThreeDeckShip)
                     {
                         ThreeDeck* td = (ThreeDeck*)ship;
                         Deck d1 = td->getDeck_1();
@@ -342,7 +345,7 @@ void GameView::_human_pc_mode(string login)
                             pc_gamer_2->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(FourDeck))
+                    else if (ship->getTypeShip() == TypeShip::FourDeckShip)
                     {
                         FourDeck* fd = (FourDeck*)ship;
                         Deck d1 = fd->getDeck_1();
@@ -483,15 +486,13 @@ void GameView::_pc_pc_mode()
         }
 
        
-        
+        GETCH;
+        CLEARSCREEN;
         cout << "Игра между компьютером " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
         
         screen.printScreenGamer_1(gb_1, gb_2, ships, ships_1);
         cout << endl;
         screen.printScreenGamer_2(gb_2_1, gb_2_2, ships_1, ships);
-       
-        GETCH;
-        CLEARSCREEN;
        
 
         if (pc) {
@@ -512,7 +513,7 @@ void GameView::_pc_pc_mode()
                 for (size_t i = 0; i < 10; i++)
                 {
                     Ship* ship = ships_1[i];
-                    if (typeid(ship) == typeid(SingleDeck))
+                    if (ship->getTypeShip() == TypeShip::SingleDeckShip)
                     {
                         SingleDeck* sd = (SingleDeck*)ship;
                         Deck d = sd->getDeck();
@@ -529,7 +530,7 @@ void GameView::_pc_pc_mode()
                         }
 
                     }
-                    else if (typeid(ship) == typeid(DoubleDeck))
+                    else if (ship->getTypeShip() == TypeShip::DoubleDeckShip)
                     {
                         DoubleDeck* dd = (DoubleDeck*)ship;
                         Deck d1 = dd->getDeck_1();
@@ -552,7 +553,7 @@ void GameView::_pc_pc_mode()
                             pc_gamer_1->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(ThreeDeck))
+                    else if (ship->getTypeShip() == TypeShip::ThreeDeckShip)
                     {
                         ThreeDeck* td = (ThreeDeck*)ship;
                         Deck d1 = td->getDeck_1();
@@ -584,7 +585,7 @@ void GameView::_pc_pc_mode()
                             pc_gamer_1->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(FourDeck))
+                    else if (ship->getTypeShip() == TypeShip::FourDeckShip)
                     {
                         FourDeck* fd = (FourDeck*)ship;
                         Deck d1 = fd->getDeck_1();
@@ -655,7 +656,7 @@ void GameView::_pc_pc_mode()
                 for (size_t i = 0; i < 10; i++)
                 {
                     Ship* ship = ships[i];
-                    if (typeid(ship) == typeid(SingleDeck))
+                    if (ship->getTypeShip() == TypeShip::SingleDeckShip)
                     {
                         SingleDeck* sd = (SingleDeck*)ship;
                         Deck d = sd->getDeck();
@@ -672,7 +673,7 @@ void GameView::_pc_pc_mode()
                         }
 
                     }
-                    else if (typeid(ship) == typeid(DoubleDeck))
+                    else if (ship->getTypeShip() == TypeShip::DoubleDeckShip)
                     {
                         DoubleDeck* dd = (DoubleDeck*)ship;
                         Deck d1 = dd->getDeck_1();
@@ -695,7 +696,7 @@ void GameView::_pc_pc_mode()
                             pc_gamer_2->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(ThreeDeck))
+                    else if (ship->getTypeShip() == TypeShip::ThreeDeckShip)
                     {
                         ThreeDeck* td = (ThreeDeck*)ship;
                         Deck d1 = td->getDeck_1();
@@ -727,7 +728,7 @@ void GameView::_pc_pc_mode()
                             pc_gamer_2->setTurn(turn);
                         }
                     }
-                    else if (typeid(ship) == typeid(FourDeck))
+                    else if (ship->getTypeShip() == TypeShip::FourDeckShip)
                     {
                         FourDeck* fd = (FourDeck*)ship;
                         Deck d1 = fd->getDeck_1();
