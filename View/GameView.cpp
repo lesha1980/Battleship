@@ -64,12 +64,19 @@ void GameView::_human_pc_mode(string login)
             cout << "Игрок " << pc_gamer_2->getLogin() << " выиграл морское сражение!";
             break;
         }
-         
+       
+        try {
         GETCH;
         CLEARSCREEN;
 
-        cout << "Игра между " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
+       
 
+            cout << "Игра между " << pc_gamer_1->getLogin() << " и " << " компьютером " << pc_gamer_2->getLogin() << endl;
+        }
+        catch (const char* msg) {
+
+            cout << msg << endl;
+        }
         screen.printScreenGamer_1(gb_1, gb_2, ships, ships_1);
 
         if (pc) {
@@ -110,7 +117,8 @@ void GameView::_human_pc_mode(string login)
                         if (x_1 == x && y_1 == y)
                         {
                             cout << "Фиксируем попадание в цель" << endl;
-                            d.setStatus(0);
+                            //d.setStatus(0);
+                            sd->getDeck().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -129,7 +137,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            dd->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -140,7 +148,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            dd->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -159,7 +167,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            td->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -170,7 +178,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            td->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -181,7 +189,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d3.getX() == x && d3.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            td->getDeck_3().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -201,7 +209,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            fd->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -212,7 +220,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            fd->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -223,7 +231,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d3.getX() == x && d3.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            fd->getDeck_3().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -234,7 +242,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d4.getX() == x && d4.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            fd->getDeck_4().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_1->setTurn(turn);
@@ -283,7 +291,7 @@ void GameView::_human_pc_mode(string login)
                         if (x_1 == x && y_1 == y)
                         {
                             cout << "Фиксируем попадание в цель" << endl;
-                            d.setStatus(0);
+                            sd->getDeck().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -299,7 +307,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            dd->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -307,7 +315,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            dd->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -323,7 +331,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            td->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -331,7 +339,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            td->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -339,7 +347,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d3.getX() == x && d3.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            td->getDeck_3().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -356,7 +364,7 @@ void GameView::_human_pc_mode(string login)
                         if (d1.getX() == x && d1.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d1.setStatus(0);
+                            fd->getDeck_1().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -364,7 +372,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d2.getX() == x && d2.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d2.setStatus(0);
+                            fd->getDeck_2().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -372,7 +380,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d3.getX() == x && d3.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            fd->getDeck_3().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
@@ -380,7 +388,7 @@ void GameView::_human_pc_mode(string login)
                         else if (d4.getX() == x && d4.getY() == y)
                         {
                             cout << "Фиксируем попадание в цель " << endl;
-                            d3.setStatus(0);
+                            fd->getDeck_4().setStatus(0);
                             Turn turn(x, y);
                             turn.setStatusTurn(StatusTurn::Hit);
                             pc_gamer_2->setTurn(turn);
