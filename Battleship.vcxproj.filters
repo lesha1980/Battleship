@@ -16,6 +16,30 @@
     <Filter Include="Model\Enums">
       <UniqueIdentifier>{38080153-3b19-4b32-8b74-dc3b5aa7bd3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\GameBoard">
+      <UniqueIdentifier>{598a2f33-c310-46f1-9ba4-4e4999314630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Gamers">
+      <UniqueIdentifier>{9568cbbb-e7e0-4a97-888a-e306071eb129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{577cae78-54bf-4c88-b03b-f927cc1a7ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{8412d9c9-2b94-4240-bcc7-a37f184f39ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{26206f00-f802-4140-9abc-7078e080e6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Game">
+      <UniqueIdentifier>{cb1b2dc3-9caf-4e1f-ab76-24b4caf35e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilits">
+      <UniqueIdentifier>{dcd81e0d-e3e8-46ec-9438-bb6cda869692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Strategy">
+      <UniqueIdentifier>{c5fc3c31-519a-4eaf-9839-5a10d7cec138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Deck.h">
@@ -36,11 +60,218 @@
     <ClInclude Include="Model\SingleDeck.h">
       <Filter>Model\Ship</Filter>
     </ClInclude>
+    <ClInclude Include="Model\MultiDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\DoubleDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ThreeDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\FourDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Cell.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\StatusCell.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\GameBoard.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Tabloid.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Gamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ComputerGamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\HumanGamer.h">
+      <Filter>Model\Gamers</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleMapGenerateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleShipGenerateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleShipMapValidationService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ZoneDeck.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\CoordXY.h">
+      <Filter>Model\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleShipMapBindingService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\GameBoardContext.h">
+      <Filter>Model\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GameBoardContextController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GameView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GameMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Turn.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Enums\StatusTurn.h">
+      <Filter>Model\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\HumanGamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\PCGamerController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\BattleGamerGenerateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GameHumanPCMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\GamePCPCMode.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilits\BattleStack.h">
+      <Filter>Utilits</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Screen.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StrategyGame.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StrategyRandomShot.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\StrategyDontShotZoneShip.h">
+      <Filter>Model\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\StrategyContextService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\GameActionController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Deck.cpp">
       <Filter>Model\Deck</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model\SingleDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\MultiDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\DoubleDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ThreeDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\FourDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Cell.cpp">
+      <Filter>Model\GameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\GameBoard.cpp">
+      <Filter>Model\GameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Gamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ComputerGamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\HumanGamer.cpp">
+      <Filter>Model\Gamers</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleMapGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleShipGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleShipMapValidationService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Ship.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\CoordXY.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ZoneDeck.cpp">
+      <Filter>Model\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleShipMapBindingService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\GameBoardContext.cpp">
+      <Filter>Model\GameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\GameBoardContextController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GameView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Turn.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\HumanGamerController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\PCGamerController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\BattleGamerGenerateService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GameHumanPCMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GamePCPCMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GameMode.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Screen.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyGame.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyRandomShot.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\StrategyDontShotZoneShip.cpp">
+      <Filter>Model\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\StrategyContextService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\GameActionController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

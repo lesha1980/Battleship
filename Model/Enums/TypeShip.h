@@ -2,8 +2,8 @@
 
 enum TypeShip {
 	UnknownShip,
-	SingleDeck,
-	DoubleDeck,
-	ThreeDeck,
-	FourDeck
+	SingleDeckShip,
+	DoubleDeckShip,
+	ThreeDeckShip,
+	FourDeckShip
 };

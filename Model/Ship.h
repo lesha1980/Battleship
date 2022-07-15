@@ -9,4 +9,13 @@ protected:
 	TypeShip _type_ship;
 	StatusShip _status_ship;
 
+public:
+	Ship(TypeShip type_ship, StatusShip status_ship);
+	TypeShip getTypeShip();
+	StatusShip getStatusShip();
+	void selfTest();
+
+	virtual ~Ship() {
+
+	}
 };
